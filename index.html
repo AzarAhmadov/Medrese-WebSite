@@ -93,7 +93,7 @@
     </header>
     <main>
         <section id="slider-area" class="container">
-            <div class="swiper mySwiper">
+            <div class="swiper swiper-container1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="border-user">
@@ -204,12 +204,33 @@
 
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next n"></div>
+            <div class="swiper-button-prev p"></div>
         </section>
 
-        <section id="banner">
-          
+        <section id="banner-area">
+            <div class="swiper swiper-container2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div class="banner-img">
+                          <img src="./assets/img/quran-gc7ced0b95_1920 1.png" alt="">
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="banner-img">
+                        <img src="./assets/img/quran-gc7ced0b95_1920 1.png" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="banner-img">
+                        <img src="./assets/img/quran-gc7ced0b95_1920 1.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next n2"></div>
+                <div class="swiper-button-prev p2"></div>
+                <div class="swiper-pagination"></div>
+              </div>
         </section>
     </main>
 
@@ -298,16 +319,6 @@
         </div>
     </footer>  -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 10,
-            spaceBetween: 0,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
     <script src="assets/main.js/main.js"></script>
 </body>
 
