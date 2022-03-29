@@ -624,6 +624,15 @@ h6 {
     position: relative;
 }
 
+#video-area{
+    position: relative;
+}
+
+.video-left-img{
+    position: absolute;
+    top: 20px;
+}
+
 .vide-slider .video-item::after {
     width: 100%;
     height: 267px;
