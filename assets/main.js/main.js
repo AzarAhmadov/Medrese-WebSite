@@ -38,3 +38,12 @@ var swiper2 = new Swiper(".swiper-container2", {
   mousewheel: true,
   keyboard: true,
 });
+
+var swiper = new Swiper(".swiper-container3", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".n3",
+    prevEl: ".p3",
+  },
+});
