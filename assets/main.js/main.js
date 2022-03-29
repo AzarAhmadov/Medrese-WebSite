@@ -16,10 +16,3 @@ nav_link.forEach((item) => {
       item.classList.add("active");
     });
 });
-
-const blog_open = document.querySelector('.blog-open')
-const dropdown = document.querySelector('.dropdown')
-
-blog_open.addEventListener('click', function(){
-    dropdown.classList.toggle('active')
-})

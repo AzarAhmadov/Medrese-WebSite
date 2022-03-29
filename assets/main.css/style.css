@@ -160,21 +160,24 @@ h6 {
     position: relative;
 }
 
-.header-main .container .dropdown {
+.header-main .blog-open:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    top: 55px;
+}
+
+
+.header-main .blog-open .dropdown {
     position: absolute;
-    right: 80px;
-    top: 139px;
+    left:20px;
+    top: 0px;
+z-index: 10000 !important;
     z-index: 10;
     opacity: 0;
     visibility: hidden;
-    transition: 300ms all;
+    transition: 300ms ease-in-out;
 }
 
-.header-main .container .dropdown.active {
-    opacity: 1;
-    visibility: visible;
-    top: 119px;
-}
 
 .header-main .dropdown ul {
     display: flex;
@@ -444,7 +447,7 @@ padding: 7px;
     
     border: double 2px transparent;
     border-radius: 80px;
-    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #D60201 ,#000000);
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #D60201 , #000);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
