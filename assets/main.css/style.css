@@ -387,7 +387,7 @@ h6 {
     padding-right: 80px;
 }
 
-.swiper-button-next {
+#slider-area .swiper-button-next {
     background: url('../img/chevron-down\ \(1\).png');
     content: "";
     background-size: cover;
@@ -396,18 +396,12 @@ h6 {
     right: 30px !important;
 }
 
-.swiper-button-next:after {
+#slider-area .swiper-button-next:after {
     display: none;
 }
 
-.swiper-slide .user {
-    border-radius: 50%;
-    position: relative;
-    border: 1.46px solid;
-    border: linear-gradient(to bottom right, #D60301, #000000);
-}
 
-.swiper-button-prev {
+#slider-area .swiper-button-prev {
     background: url(../img/chevron-down.png);
     content: "";
     background-size: cover;
@@ -432,7 +426,6 @@ h6 {
     border-radius: 18px;
 }
 
-
 #slider-area .swiper {
     border-radius: 18.6164px;
 }
@@ -441,4 +434,17 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#slider-area .swiper-slide img{
+padding: 7px;
+}
+
+.border-user{
+    
+    border: double 2px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #D60201 ,#000000);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
