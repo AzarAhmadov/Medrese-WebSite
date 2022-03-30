@@ -570,16 +570,10 @@ h6 {
 }
 
 
-.video-item .video-item img {
-    border-radius: 4.38865px;
-}
-
 .video-item .video-dec {
     background: #FFFFFF;
     border: 1.75546px solid #ECECEC;
     box-sizing: border-box;
-    border-radius: 4.38865px;
-    margin-top: -10px;
     padding-top: 25px;
     padding-bottom: 44px;
     padding-left: 23px;
@@ -625,9 +619,21 @@ h6 {
 }
 
 .vide-slider .video-item .img {
+    border-radius: 4.38865px;
     background: url(../img/quran-g4877b9a3b_1920.png);
     width: 100%;
     height: 273px;
+    position: relative;
+}
+
+.vide-slider .video-item .img::after{
+    position: absolute;
+    top:0;
+    content:"";
+    width: 100%;
+    height: 273px;
+background: rgba(0, 0, 0, 0.55);
+border-radius: 4.38865px;
 }
  .video-item .img2{
     background: url(../img/quran-gc7ced0b95_1920.png) !important;
@@ -842,9 +848,10 @@ opacity: 0;
     padding-top: 92px;
     background: #fff;
     background: url(../img/ft.png);
-    background-size: cover;
     width: 100%;
+    background-repeat: no-repeat;
     height: 100%;
+    padding-bottom: 78px;
 }
 
 .g-item {
@@ -903,4 +910,31 @@ opacity: 0;
 
 .g-row .g-col:nth-child(6) {
     background: url(../img/Снимок\ экрана\ 2022-03-28\ в\ 09.27\ 1.png);
+}
+
+#blog{
+    padding-top: 76px;   
+background: #F9F9F9;
+}
+
+.b-left h3{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 102%;
+margin-bottom: 30px;
+color: #232323;
+}
+
+.b-left p{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 102%;
+/* or 16px */
+
+
+color: #919191;
 }
