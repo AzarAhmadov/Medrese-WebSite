@@ -1257,10 +1257,15 @@ h6 {
     .blog-detail {
         width: 317px;
     }
-    
+    #podcast::before {
+        right: 0px;
+    }
 }
 
 @media only screen and (max-width:478px){
+    #banner-area .swiper-pagination-bullet{
+        width: 50px;
+    }
     #banner-area .swiper-button-next{
         width: 40px;
         height: 40px;
