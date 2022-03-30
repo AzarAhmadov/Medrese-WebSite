@@ -1,3 +1,4 @@
+
 const list_li = document.querySelectorAll('.nav-list')
 const nav_link = document.querySelectorAll('.nav-link')
 
@@ -32,6 +33,29 @@ open_menu.addEventListener('click', function(){
   mobil_menu.classList.toggle('active')
   body.classList.toggle('active')
 })
+
+
+var swiper1 = new Swiper(".swiper-container1", {
+  slidesPerView: 10,
+  breakpoints: {
+    140: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    740: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
+    1324: {
+      slidesPerView: 10,
+      spaceBetween: 0,
+    },
+  },
+  navigation: {
+      nextEl: ".n",
+      prevEl: ".p",
+  },
+});
 
 var swiper3 = new Swiper(".swiper-container3", {
   slidesPerView: 3,
@@ -86,30 +110,6 @@ var swiper4 = new Swiper(".swiper-container4", {
   },
 });
 
-var swiper1 = new Swiper(".swiper-container1", {
-  slidesPerView: 10,
-  breakpoints: {
-    140: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    740: {
-      slidesPerView: 6,
-      spaceBetween: 20,
-    },
-    1324: {
-      slidesPerView: 10,
-      spaceBetween: 0,
-    },
-  },
-  navigation: {
-      nextEl: ".n",
-      prevEl: ".p",
-  },
-});
-
-
-
 var swiper2 = new Swiper(".swiper-container2", {
   spaceBetween: 50,
   slidesPerView: 1,
@@ -125,5 +125,7 @@ var swiper2 = new Swiper(".swiper-container2", {
     key: "slide",
   },
 });
+
+
 
 
