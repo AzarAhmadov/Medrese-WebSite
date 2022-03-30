@@ -861,6 +861,52 @@ h6 {
     padding-bottom: 78px;
 }
 
+.g-col{
+    position: relative;
+}
+
+.g-col:hover .galary-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.galary-text{
+    transition: 400ms all;
+    background: linear-gradient(179.94deg, rgba(86, 86, 86, 0) 0.05%, #000000 99.95%);
+border-radius: 3.70166px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-left: 24px;
+    padding-bottom: 27px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.galary-text span{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 23.1371px;
+margin-bottom: 8px;
+line-height: 102%;
+color: #FFFFFF;
+}
+
+.galary-text p{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 14.8067px;
+line-height: 102%;
+color: #E1E1E1;
+}
+
 .g-item {
     display: flex;
     justify-content: space-between;
