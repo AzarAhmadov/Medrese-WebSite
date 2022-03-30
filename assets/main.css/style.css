@@ -212,29 +212,32 @@ h6 {
     color: #d60201;
 }
 
-.abs_img2 {
-    position: absolute;
-    z-index: -1;
-    right: 35px;
-    top: -80px;
-}
 
 .footer {
-    padding-bottom: 0px;
-    padding-top: 65px;
+    padding-bottom: 90px;
+    padding-top: 95px;
+    background-repeat: no-repeat !important;
+    position: relative;
+    background: url(../img/mosque-g29a32dccd_1280\ 5.png);
+}
+
+.form-col{
     position: relative;
 }
 
-.footer .ft-img {
-    position: absolute;
-    bottom: -90px;
-    z-index: -1;
+.form-col::after{
+content:"";
+position: absolute;
+z-index: -1;
+top: -70px;
+right: 30px;
+width: 139px;
+height: 142px;
+background-repeat: no-repeat !important;
+background: url(../img/abs.png);
 }
 
-.footer-alt {
-    transform: translateY(145px);
-    position: absolute;
-    bottom: 0;
+.ft-end {
     width: 100%;
     background: #232323;
     height: 61px;
@@ -914,7 +917,27 @@ opacity: 0;
 
 #blog{
     padding-top: 76px;   
+    padding-bottom: 200px;
 background: #F9F9F9;
+}
+
+.blog-img{
+    background: url(../img/quran-gc7ced0b95_1920.png);
+    width: 410.51px;
+height: 325.81px;
+border-radius: 4.50007px;
+position: relative;
+background-repeat: no-repeat;
+}
+
+.blog-img::after{
+    position: absolute;
+    top: 0;
+    content:"";
+    width: 100%;
+    height:290px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4.50007px;
 }
 
 .b-left h3{
@@ -933,8 +956,101 @@ font-style: normal;
 font-weight: 700;
 font-size: 16px;
 line-height: 102%;
-/* or 16px */
-
-
 color: #919191;
+}
+
+.blog-post{
+    margin-top: 54px;
+    position: relative;
+}
+
+.blog-detail{
+    position: absolute;
+    padding-left: 26px;
+    bottom: -110px;
+    left: 34px;
+    width: 376px;
+    background: #FFF;
+box-shadow: 0px 4.50007px 9.90016px rgba(0, 0, 0, 0.1);
+border-radius: 9.00014px 0px 9.00014px 9.00014px;
+}
+
+.blog-detail .time{
+    position: absolute;
+    width: max-content;
+    padding: 12px 30px;
+    left: 19px;
+    top: -25px;
+    background: #D60201;
+border-radius: 51.3008px;
+}
+
+.blog-detail .time span{
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 17.2552px;
+line-height: 102%;
+color: #FFFFFF;
+}
+
+.blog-detail .comment{
+    margin-top: 41px;
+}
+
+.blog-detail .comment i{
+    color: #d60201;
+    font-size: 20px;
+}
+
+.blog-detail .comment span{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 17.7154px;
+line-height: 102%;
+margin-left: 8px;
+color: #989898;
+}
+
+.blog-detail .b-text{
+margin-top: 18px;
+padding-bottom: 18px;
+}
+
+.blog-detail .b-text h5{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 102%;
+    color: #232323;
+}
+
+.blog-detail .b-text p{
+    font-family: 'Quicksand';
+font-style: normal;
+padding-right: 24px;
+margin-bottom: 18px;
+margin-top: 11px;
+font-weight: 600;
+font-size: 14px;
+line-height: 102%;
+color: #919191;
+}
+
+.blog-detail .b-text a{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 17.7154px;
+line-height: 102%;
+
+color: #D60201;
+}
+
+.blog-detail .b-text a i{
+margin-left: 13px;
+    font-size: 13px;
+
 }
