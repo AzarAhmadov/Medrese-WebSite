@@ -1261,6 +1261,14 @@ h6 {
 }
 
 @media only screen and (max-width:478px){
+    #banner-area .swiper-button-next{
+        width: 40px;
+        height: 40px;
+    }
+    #banner-area .swiper-button-prev{
+        width: 40px;
+        height: 40px;
+    }
     .vide-slider .video-item {
         width: 100%;
     }
