@@ -15,18 +15,26 @@ nav_link.forEach((item) => {
     });
 });
 
-
-var swiper1 = new Swiper(".swiper-container1", {
-  slidesPerView: 10,
-  spaceBetween: 0,
-  navigation: {
-      nextEl: ".n",
-      prevEl: ".p",
-  },
-});
-
 var swiper3 = new Swiper(".swiper-container3", {
   slidesPerView: 3,
+    breakpoints: {
+    300:{
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    1100:{
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1200:{
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1400:{
+      slidesPerView: 3,
+      spaceBetween: 10,
+    }
+  },
   navigation: {
     nextEl: ".n3",
     prevEl: ".p3",
@@ -36,11 +44,52 @@ var swiper3 = new Swiper(".swiper-container3", {
 var swiper4 = new Swiper(".swiper-container4", {
   slidesPerView: 3,
   spaceBetween: 0,
+     breakpoints: {
+    300:{
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1100:{
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1200:{
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1400:{
+      slidesPerView: 3,
+      spaceBetween: 10,
+    }
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
+
+var swiper1 = new Swiper(".swiper-container1", {
+  slidesPerView: 10,
+  breakpoints: {
+    140: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    740: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1324: {
+      slidesPerView: 10,
+      spaceBetween: 0,
+    },
+  },
+  navigation: {
+      nextEl: ".n",
+      prevEl: ".p",
+  },
+});
+
 
 
 var swiper2 = new Swiper(".swiper-container2", {
@@ -58,3 +107,5 @@ var swiper2 = new Swiper(".swiper-container2", {
     key: "slide",
   },
 });
+
+
