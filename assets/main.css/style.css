@@ -1469,6 +1469,7 @@ color: #E1E1E1;
     .b-item {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .b-right {
@@ -1546,6 +1547,15 @@ color: #E1E1E1;
 }
 
 @media only screen and (max-width:600px) {
+    #podcast .p-title p br{
+        display: none;
+    }
+    .g-item .g-left p br{
+        display: none;
+    }
+    .b-left p br{
+        display: none;
+    }
     .video-col p {
         font-size: 15px;
     }
