@@ -780,13 +780,13 @@ h6 {
 }
 
 .swiper-container4 {
-    padding-right: 160px !important;
+    padding-right: 180px !important;
 }
 
 .podcast-item {
     background: url(../img/book-g558c2ce9b_1920\ 1.png);
-    width: 354.46px;
-    background-size: cover;
+    width: 290.46px;
+    background-size: contain;
     height: 483.1px;
     position: relative;
     border-radius: 4.62743px;
@@ -834,7 +834,7 @@ h6 {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
-    font-size: 23.1371px;
+    font-size: 20.1371px;
     line-height: 102%;
     color: #FFFFFF;
     margin-bottom: 9px;
@@ -844,7 +844,7 @@ h6 {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 500;
-    font-size: 14.8078px;
+    font-size: 12.8078px;
     line-height: 102%;
     color: #FFFFFF;
 
