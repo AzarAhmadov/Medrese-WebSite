@@ -1068,7 +1068,7 @@ color: #E1E1E1;
     padding-bottom: 18px;
 }
 
-.blog-detail .b-text h5 {
+.blog-detail .b-text h5 a{
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
@@ -1206,8 +1206,13 @@ color: #E1E1E1;
     color: #5E5E5E;
 }
 
+.video-play {
+    display: flex;
+    justify-content: center;
+}
+
 .video-play .vid {
-    width: 100%;
+    width: 920px;
 }
 
 .video-right ul li svg {
@@ -1389,6 +1394,9 @@ color: #E1E1E1;
 }
 
 @media only screen and (max-width:992px) {
+    .video-play .vid {
+        width:100%;
+    }
     .video-dec-row {
         display: flex;
         flex-direction: column;
@@ -1552,6 +1560,9 @@ color: #E1E1E1;
     .video-left h4 {
         font-size: 20px;
     }
+        .video-left h4 br{
+            display: none;
+        }
 
     .video-col .v-title {
         font-size: 20px;
