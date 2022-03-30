@@ -15,6 +15,15 @@ nav_link.forEach((item) => {
     });
 });
 
+const mobil_menu = document.querySelector('.mobil-menu')
+const open_menu = document.querySelector('.open-menu')
+const body = document.querySelector('.body')
+
+open_menu.addEventListener('click', function(){
+  mobil_menu.classList.toggle('active')
+  body.classList.toggle('active')
+})
+
 var swiper3 = new Swiper(".swiper-container3", {
   slidesPerView: 3,
     breakpoints: {
@@ -76,7 +85,7 @@ var swiper1 = new Swiper(".swiper-container1", {
       spaceBetween: 20,
     },
     740: {
-      slidesPerView: 4,
+      slidesPerView: 6,
       spaceBetween: 20,
     },
     1324: {
