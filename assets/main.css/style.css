@@ -57,7 +57,7 @@ h6 {
 }
 
 .header-top .ht-left ul li a:hover {
-    background: var(--top_hover);
+    background: var(--first_color);
     transition: 400ms all;
 }
 
