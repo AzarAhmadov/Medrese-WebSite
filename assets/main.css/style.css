@@ -1210,9 +1210,8 @@ color: #E1E1E1;
     width: 100%;
 }
 
-.video-right ul li .telegram {
-    margin-right: 0px;
-    background: transparent !important;
+.video-right ul li svg {
+    margin-right: 10px;
 }
 
 .video-right ul li:last-child {
