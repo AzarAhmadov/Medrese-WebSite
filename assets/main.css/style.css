@@ -1547,6 +1547,9 @@ color: #E1E1E1;
 }
 
 @media only screen and (max-width:600px) {
+    .v-left p br {
+        display: none;
+    }
     #podcast .p-title p br{
         display: none;
     }
