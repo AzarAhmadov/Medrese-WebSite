@@ -1211,6 +1211,8 @@ height: 60.72px;
  @media only screen and (max-width:768px){
      .footer{
          background-size: 0px !important;
+         padding-top: 44px;
+         padding-bottom: 44px;
      }
     .g-row .g-col {
         height: 256px !important;
