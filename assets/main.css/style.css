@@ -1210,10 +1210,14 @@ h6 {
         height: 256px !important;
         background-repeat: no-repeat !important;
         background-size: contain !important;
+        background-position: center !important;
     }
 } 
 
 @media only screen and (max-width:600px){
+    .blog-post {
+    margin-top: 74px;
+}
     .g-row{
         grid-template-columns: repeat(1,1fr);
     }
