@@ -1080,6 +1080,29 @@ h6 {
     left: -100%;
 }
 
+.blog-arrow{
+    transform: translateY(2px);
+    transition: 300ms all;
+}
+
+.blog-arrow.active{
+    transform: rotate(90deg);
+}
+
+.mobil-menu ul .blog-mobil{
+   margin-top: 10px;
+   visibility: hidden;
+   opacity: 0;
+   transition: 400ms all;
+   transform: translateY(30px);
+}
+
+.mobil-menu ul .blog-mobil.active{
+    opacity: 1;
+   transform: translateY(0px);
+    visibility: visible;
+}
+
 .mobil-menu.active{
     left: 0;
 }

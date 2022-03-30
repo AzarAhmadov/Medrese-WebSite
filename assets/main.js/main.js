@@ -18,6 +18,15 @@ nav_link.forEach((item) => {
 const mobil_menu = document.querySelector('.mobil-menu')
 const open_menu = document.querySelector('.open-menu')
 const body = document.querySelector('.body')
+const blogMobil = document.querySelector('.blog-mobil')
+const opBlog = document.querySelector('.op-mobil')
+const blogArrow = document.querySelector('.blog-arrow')
+
+opBlog.addEventListener('click', function(){
+blogMobil.classList.toggle('active')
+blogMobil.classList.toggle('actives')
+blogArrow.classList.toggle('active')
+})
 
 open_menu.addEventListener('click', function(){
   mobil_menu.classList.toggle('active')
