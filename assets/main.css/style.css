@@ -780,14 +780,14 @@ h6 {
 }
 
 .swiper-container4 {
-    padding-right: 180px !important;
+    padding-right: 100px !important;
 }
 
 .podcast-item {
     background: url(../img/book-g558c2ce9b_1920\ 1.png);
-    width: 290.46px;
+    width: 283.46px !important;
     background-size: contain;
-    height: 483.1px;
+    height: 453.1px;
     position: relative;
     border-radius: 4.62743px;
     z-index: 1000;
