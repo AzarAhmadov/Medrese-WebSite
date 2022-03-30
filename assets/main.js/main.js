@@ -15,6 +15,7 @@ nav_link.forEach((item) => {
     });
 });
 
+
 var swiper1 = new Swiper(".swiper-container1", {
   slidesPerView: 10,
   spaceBetween: 0,
@@ -24,26 +25,36 @@ var swiper1 = new Swiper(".swiper-container1", {
   },
 });
 
-var swiper2 = new Swiper(".swiper-container2", {
-  loop: true,
-   slidesPerView: 1,
-        spaceBetween: 30,
-  navigation: {
-    nextEl: ".n2",
-    prevEl: ".p2",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  mousewheel: true,
-  keyboard: true,
-});
-
-var swiper = new Swiper(".swiper-container3", {
+var swiper3 = new Swiper(".swiper-container3", {
   slidesPerView: 3,
-  spaceBetween: 20,
   navigation: {
     nextEl: ".n3",
     prevEl: ".p3",
+  },
+});
+
+var swiper4 = new Swiper(".swiper-container4", {
+  slidesPerView: 3,
+  spaceBetween: 0,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+var swiper2 = new Swiper(".swiper-container2", {
+  spaceBetween: 50,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  history: {
+    key: "slide",
   },
 });

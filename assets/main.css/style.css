@@ -624,51 +624,76 @@ h6 {
     position: relative;
 }
 
-#video-area{
+.vide-slider .video-item .img {
+    background: url(../img/quran-g4877b9a3b_1920.png);
+    width: 100%;
+    height: 273px;
+}
+ .video-item .img2{
+    background: url(../img/quran-gc7ced0b95_1920.png) !important;
+}
+
+.video-item .img3{
+    background: url(../img/mosque-gea6280b64_1920.png) !important;
+}
+
+.video-item .img4{
+    background: url(../img/quran-gc7ced0b95_1920.png) !important;
+}
+
+.video-item .img5{
+    background: url(../img/mosque-gea6280b64_1920.png) !important;
+}
+
+.video-item .img6{
+    background: url(../img/mosque-gea6280b64_1920.png) !important;
+}
+
+#video-area {
     position: relative;
 }
 
-.video-left-img{
-    position: absolute;
-    top: 20px;
+#video-area {
+visibility: visible;
+opacity: 1;
 }
 
-.vide-slider .video-item::after {
-    width: 100%;
-    height: 267px;
-    content: "";
-    position: absolute;
-    top: 0;
-    background: rgba(0, 0, 0, 0.55);
-    border-radius: 4.38865px;
-}
-
-.vide-slider .video-item:hover .icon-hover {
-    visibility: visible;
+.video-item:hover .icon-hover{
     opacity: 1;
+    visibility: visible;
 }
 
-.icon-hover {
+.icon-hover{
     position: absolute;
-    top: 30%;
-    transition: 400ms all;
+    top:90px;
     left: 50%;
-    z-index: 100;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    transform: translateX(-50%);
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    visibility: hidden;
+    align-items: center;
+    width: 95px;
+height: 95px;
+transition: 400ms all;
+border-radius: 50%;
+background: rgba(0, 0, 0, 0.6);
+visibility: hidden;
+opacity: 0;
 }
 
-.icon-hover i {
+.icon-hover i{
+    color:#fff;
     font-size: 42px;
-    color: #fff;
+}
+
+#video-area::before {
+    background: url(../img/building-g4f08f02ac_1280\ 1.png);
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 41px;
+    content: "";
 }
 
 .vide-slider .swiper-button-next {
@@ -689,9 +714,193 @@ h6 {
 }
 
 .vide-slider .swiper-button-prev::after {
-    display: none ;
+    display: none;
 }
 
 .vide-slider .swiper-button-next::after {
-    display: none ;
+    display: none;
+}
+
+#podcast {
+    position: relative;
+    margin: 40px auto 0;
+    background: #FAFAFA;
+    padding-top: 70px;
+    padding-bottom: 79px;
+}
+
+#podcast::before {
+    background: url(../img/islamic-lamp.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 200px;
+    width: 380px;
+    height: 375px;
+}
+
+#podcast .p-title {
+    text-align: center;
+}
+
+#podcast .p-title h2 {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 102%;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #232323;
+}
+
+#podcast .p-title p {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 102%;
+    text-align: center;
+    color: #919191;
+    margin-bottom: 43px;
+}
+
+.swiper-container4 {
+    padding-right: 160px !important;
+}
+
+.podcast-item {
+    background: url(../img/book-g558c2ce9b_1920\ 1.png);
+    width: 354.46px;
+    background-size: cover;
+    height: 483.1px;
+    position: relative;
+    border-radius: 4.62743px;
+    z-index: 1000;
+    margin-top: 58px;
+}
+
+.podcast-item::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    border-radius: 4.62743px;
+    z-index: -1;
+}
+
+.podcast-item .top-music {
+    background: #D60201;
+    width: 62.93px;
+    height: 62.93px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 28px;
+    left: 17px;
+}
+
+
+.podcast-item .top-music i {
+    color: #fff;
+    font-size: 25px;
+}
+
+.podcast-item .bottom-dec {
+    position: absolute;
+    bottom: 0;
+    bottom: 21px;
+    left: 17px;
+}
+
+.podcast-item .bottom-dec .p-t {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23.1371px;
+    line-height: 102%;
+    color: #FFFFFF;
+    margin-bottom: 9px;
+}
+
+.podcast-item .bottom-dec .p-b {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.8078px;
+    line-height: 102%;
+    color: #FFFFFF;
+
+}
+
+
+#galary {
+    padding-top: 92px;
+    background: #fff;
+    background: url(../img/ft.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.g-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 78px;
+}
+
+
+.g-item .g-left h3 {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 102%;
+    margin-bottom: 30px;
+    color: #232323;
+}
+
+.g-item .g-left p {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 102%;
+    color: #919191;
+}
+
+.g-row .g-col {
+    background: url('../img/Снимок\ экрана\ 2022-03-28\ в\ 09.27\ 2.png');
+    width: 420px;
+    height: 464.69px;
+    margin: 0 auto 20px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.g-row .g-col:nth-child(2) {
+    background: url('../img/Снимок\ экрана\ 2022-03-28\ в\ 09.26\ 1.png');
+}
+
+.g-row .g-col:nth-child(3) {
+    background: url(../img/Снимок\ экрана\ 2022-03-28\ в\ 09.27\ 5.png);
+}
+
+.g-row .g-col:nth-child(4) {
+    background: url(../img/Снимок\ экрана\ 2022-03-28\ в\ 09.27\ 4.png);
+}
+
+.g-row .g-col:nth-child(5) {
+    background: url(../img/Снимок\ экрана\ 2022-03-28\ в\ 09.27\ 3.png);
+}
+
+
+.g-row .g-col:nth-child(6) {
+    background: url(../img/Снимок\ экрана\ 2022-03-28\ в\ 09.27\ 1.png);
 }
