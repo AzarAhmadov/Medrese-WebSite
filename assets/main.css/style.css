@@ -444,6 +444,9 @@ h6 {
 
 #slider-area .swiper-slide img {
     padding: 7px;
+    border-radius: 50%;
+    width: 61.54px;
+height: 60.72px;
 }
 
 .border-user {
@@ -1206,6 +1209,9 @@ h6 {
 }
 
  @media only screen and (max-width:768px){
+     .footer{
+         background-size: 0px !important;
+     }
     .g-row .g-col {
         height: 256px !important;
         background-repeat: no-repeat !important;
