@@ -34,29 +34,6 @@ open_menu.addEventListener('click', function(){
   body.classList.toggle('active')
 })
 
-
-var swiper1 = new Swiper(".swiper-container1", {
-  slidesPerView: 10,
-  breakpoints: {
-    140: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    740: {
-      slidesPerView: 6,
-      spaceBetween: 20,
-    },
-    1324: {
-      slidesPerView: 10,
-      spaceBetween: 0,
-    },
-  },
-  navigation: {
-      nextEl: ".n",
-      prevEl: ".p",
-  },
-});
-
 var swiper3 = new Swiper(".swiper-container3", {
   slidesPerView: 3,
     breakpoints: {
@@ -107,6 +84,29 @@ var swiper4 = new Swiper(".swiper-container4", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+
+var swiper1 = new Swiper(".swiper-container1", {
+  slidesPerView: 10,
+  breakpoints: {
+    140: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    740: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
+    1324: {
+      slidesPerView: 10,
+      spaceBetween: 0,
+    },
+  },
+  navigation: {
+      nextEl: ".n",
+      prevEl: ".p",
   },
 });
 
