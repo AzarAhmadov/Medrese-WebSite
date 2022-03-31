@@ -742,15 +742,20 @@ h6 {
     padding-bottom: 79px;
 }
 
-#podcast::before {
-    background: url(../img/islamic-lamp.png);
+.music-podcast{
+    background:transparent !important;
+}
+
+.music-podcast::before{
+    background-size: 0px !important;
+}
+
+.music-main{
+    background: url(../img/kitaplar.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 200px;
-    width: 380px;
-    height: 375px;
+    background-position: bottom;
+    position: relative;
 }
 
 #podcast .p-title {
@@ -779,7 +784,7 @@ h6 {
     margin-bottom: 43px;
 }
 
-.swiper-container4 {
+.swiper-container4, .swiper-container9 {
     padding-right: 100px !important;
 }
 
@@ -1298,11 +1303,61 @@ h6 {
     color: #000000;
 }
 
+.icon-pot{
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66.85px;
+height: 66.85px;
+background: #D60201; 
+}
+
+.icon-pot i {
+    font-size: 25px;
+    color:#fff;
+}
+
+.pot-text{
+    position: absolute;
+    top: 0;
+    width: 93%;
+    height: 98%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+border-radius: 4.91547px;
+display: flex;
+justify-content: flex-end;
+flex-direction: column;
+padding-bottom: 22px;
+padding-left: 19px;
+}
+
+.pot-text span{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 102%;
+color: #FFFFFF;
+margin-bottom: 10px;
+}
+
+.pot-text p{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 102%;
+color: #FFFFFF;
+}
+
 .all-video {
     background: url(../img/building-big.png);
     background-size: cover;
     background-repeat: no-repeat !important;
-    padding-bottom: 73px;
+    padding-bottom: 63px;
     padding-top: 67px;
 }
 
@@ -1447,6 +1502,7 @@ h6 {
 }
 
 .all-right {
+    position: relative;
     display: flex;
 }
 
@@ -1707,7 +1763,9 @@ line-height: 16px;
 margin-bottom: 10px;
 color: #747474;
 }
-
+.ar3, .ar4{
+    top: 40px !important;
+}
 .comment-box .comment-text .m-div .user-textarea{
     font-family: 'Roboto';
 font-style: normal;
@@ -1792,7 +1850,236 @@ resize: none;
     padding-bottom: 73px;
     padding-top: 57px;
 }
+
+.music-banner{
+    background: url(../img/music.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 479px;
+    position: relative;
+    background-position: center center;
+}
+
+.music-banner::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content:"";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -37.27%, rgba(0, 0, 0, 0.96) 100%);
+border-radius: 8.16092px;
+}
+.music-player{
+    position: relative;
+    z-index: 1000;
+    height: 479px;
+    display: flex;
+    align-items: center;
+}
+.music-player .top-i{
+    width: 59px;
+height: 59px;
+background: #fff;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
+
+.music-top{
+    display: flex;
+    align-items: center;
+}
+
+.music-top span{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 140%;
+margin-left: 20px;
+color: #FFFFFF;
+}
+
+.music-time{
+    margin-top: 21px;
+    display: block;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 140%;
+color: #FFFFFF;
+}
+
+.music-load{
+    margin-top: 47px;
+    display: flex;
+    align-items: center;
+}
+
+.music-load i{
+    color:#fff;
+font-size: 20px;
+}
+
+.music-load .music-width{
+    margin: 0 28px;
+    background: rgba(255, 255, 255, 0.5);
+border-radius: 48px;
+width: 401px;
+position: relative;
+height: 10px;
+}
+
+.music-i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content:"";
+    background: #FFFFFF;
+    width: 306px;
+height: 10px;
+border-radius: 48px;
+}
+
+.music-left{
+    margin-top: 60px;
+    margin-bottom: 90px;
+}
+
+.music-left .num{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    margin-right: 20px;
+    font-size: 40px;
+    line-height: 140%;
+    color: #000000;
+}
+
+.music-left p{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 140%;
+color: #383535;
+margin-bottom: 9px;
+}
+
+.music-left span{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: #383535;
+}
+
+.music-item{
+    transform: translateY(20px);
+}
+
+
+.music-right i{
+font-size: 20px;
+    width: 55px;
+height: 55px;
+border-radius: 50%;
+display: flex;
+color:#fff;
+align-items: center;
+justify-content: center;
+background: #383535;
+}
+
+.music-right ul li{
+    margin-right: 12px;
+}
+.music-right ul li:last-child{
+    margin-right: 0;
+}
+
+.music-col {
+    padding:75px 0;
+}
+.music-text h3{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 130%;
+color: #232323;
+}
+.music-text h3:first-child{
+    margin-bottom: 36px;
+}
+
+.music-text {
+    margin-top: 100px;
+}
+.music-text .music-title2{
+    margin-top: 51px;
+    margin-bottom: 36px;
+}
+
+.ms-title{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height:102%;
+/* identical to box height, or 41px */
+
+text-align: center;
+
+color: #232323;
+}
+.music-text p{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 140%;
+color: #5E5E5E;
+}
+
+.music-bottom{
+    background: url(../img/islamic-lamp.png);
+    background-repeat: no-repeat;
+}
+
+.icon-arrow{
+    position: absolute;
+    left: 132px;
+    top: 18px;
+}
+.icon-arrow2{
+    position: absolute;
+    left: 302px;
+    top: 18px;
+
+}
+
+.all-right #tag,
+    #category{
+        width: 165px;
+    }
 @media only screen and (max-width:1400px) {
+    .pod-col{
+        display: grid !important;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .pod-col .col-lg-3{
+        width: 100% !important;
+    }
+    .pot-text{
+        width: 93% !important;
+    }
     .vide-slider .video-item .img {
         width: 355px !important;
         display: flex;
@@ -1820,16 +2107,34 @@ resize: none;
     .swiper-container8 {
         padding-right: 60px !important;
     }
+    .ar3, .ar4{
+        top: 47px !important;
+    }
 
 }
 
 @media only screen and (max-width:1300px) {
+
     .header-main nav {
         margin-left: 50px;
     }
 }
 
 @media only screen and (max-width:1200px) {
+    .pod-col{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .ar3, .ar4{
+        top: 17px !important;
+    }
+    .b-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+     .b-item  p{
+         margin-bottom: 30px;
+     }
     .blog-col2{
     margin-bottom: 50px;
 }
@@ -1846,7 +2151,7 @@ resize: none;
 
     .podcast-item::after {
         left: 0;
-        width: 94%;
+        width: 100%;
     }
 
     .swiper-container8 {
@@ -1917,6 +2222,32 @@ resize: none;
 }
 
 @media only screen and (max-width:992px) {
+    .pot-text{
+        width: 93% !important;
+    }
+    .pod-col{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .music-text{
+        margin-top: 20px;
+    }
+    .music-col {
+    transform: translateY(-6px);
+    padding: 75px 0;
+}
+    .swiper-container9 {
+        padding-right: 0 !important;
+    }
+    .music-text h3{
+        text-align: center;
+    }
+    .music-text h3 br{
+        display: none;
+    }
+    .ms-title{
+        display: flex;
+        justify-content: center;
+    }
     .cmt-main {
         padding-top: 0;
     background-size: contain;
@@ -2030,12 +2361,6 @@ resize: none;
         width: 95% !important;
     }
 
-    .b-item {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
     .b-right {
         margin-top: 30px;
     }
@@ -2093,6 +2418,61 @@ resize: none;
 }
 
 @media only screen and (max-width:768px) {
+    .pot-text{
+        left: 50%;
+        transform: translateX(-50%);
+        width: 352px !important;
+    }
+     .pod-col{
+        grid-template-columns: repeat(1,1fr);
+    }
+      .ar3{
+        top: 40px !important;
+    }
+    .ar4{
+        top: 117px !important;
+    }
+    .icon-arrow{
+        position: absolute;
+        left: 232px;
+        top: 38px;
+    }
+    .icon-arrow2{
+        position: absolute;
+        left: 232px;
+        top: 118px;
+    
+    }
+    .music-text h3 {
+        font-size: 23px;
+    }
+    .music-text h3 br {
+      display: none;
+    } 
+    .music-col {
+        transform: translateY(-9px);
+        padding: 79px 0;
+    }
+    .music-right i{
+        width: 45px;
+        height: 45px;
+    }
+    .music-i{
+        width: 100%;
+    }
+    .music-load .music-width{
+        width: 100%;
+    }
+    .music-player .top-i{
+        width: 49px;
+        height: 49px;
+    }
+    .music-top span{
+        font-size: 25px;
+    }
+    .music-left p{
+        width: 90%;
+    }
 .user-name{
     text-align: center;
 }
@@ -2180,6 +2560,21 @@ resize: none;
 }
 
 @media only screen and (max-width:600px) {
+    .music-bottom {
+    background-size: 300px !important;
+}
+.video-dec2 {
+    background-size: 250px !important;
+}
+    .music-left{
+        margin-bottom: 60px;
+    }
+    .music-banner, .music-player{
+        height: 379px;
+    }
+    #podcast {
+        padding-top: 20px;
+    }
     .yorum-yaz form .form-flex{
 flex-direction: column;
     }
@@ -2367,6 +2762,38 @@ flex-direction: column;
 }
 
 @media only screen and (max-width:478px) {
+    .music-top span {
+        font-size: 20px;
+    }
+    .ms-title{
+        transform: translateY(20px);
+    font-size: 25px;
+    }
+     .music-text h3 {
+        font-size: 22px;
+        margin-bottom: 25px !important;
+    }
+    .music-text p{
+        font-size: 15px;
+    }
+    .music-item {
+        transform: translateY(13px);
+    }
+    .music-left p{
+        font-size: 16px;
+        width: 75%;
+        margin-bottom: 5px;
+    }
+    .music-left span{
+        font-size: 15px;
+    }
+    .music-left .num{
+        margin-right: 10px;
+        font-size: 30px;
+    }
+    .music-col{
+        padding-right: 20px;
+    }
     .all-video-item-dec {
         width: 100% !important;
     }
@@ -2462,4 +2889,10 @@ flex-direction: column;
         padding-top: 50px;
     }
 
+}
+
+@media only screen and (max-width:378px){
+    .pot-text{
+        width: 93% !important;
+    }
 }
