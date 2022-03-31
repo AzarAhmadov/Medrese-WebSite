@@ -714,24 +714,27 @@ h6 {
 .vide-slider .swiper-button-next {
     border: 1px solid var(--first_color);
     border-radius: 50%;
-    background: url('../img/chevron-down\ \(1\).png');
-    content: "";
+    background: url(../img/arw-right.svg);
     right: -65px;
-    height: 55px;
-    width: 55px;
-    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-position: 15px;
+
+    background-size: 23px 23px !important;
+
     background-repeat: no-repeat;
 }
 
 .vide-slider .swiper-button-prev {
     border: 1px solid var(--first_color);
     border-radius: 50%;
-    background: url('../img/chevron-down.png');
-    content: "";
-    height: 55px;
+    background: url(../img/arw-svg-left.svg);
     left: -65px;
-    width: 55px;
-    background-size: cover;
+    width: 50px;
+height: 50px;
+background-position: 11px;
+    background-size: 23px 23px !important;
+    background-repeat: no-repeat;
 }
 
 .vide-slider .swiper-button-prev::after {
@@ -2785,10 +2788,12 @@ flex-direction: column;
       .vide-slider .swiper-button-prev{
         height: 40px;
         width: 40px;
+        background-size: 13px !important;
     }
     .vide-slider .swiper-button-next {
         height: 40px;
     width: 40px;
+    background-size: 13px !important;
     }
     .music-top span {
         font-size: 20px;
