@@ -1178,7 +1178,9 @@ h6 {
     line-height: 22px;
     color: #232323;
 }
-
+.cmt-main {
+    padding-top: 0;
+}
 #video-player {
     margin-top: 41px;
 }
@@ -1300,7 +1302,7 @@ h6 {
     background: url(../img/building-big.png);
     background-size: cover;
     background-repeat: no-repeat !important;
-    padding-bottom: 100px;
+    padding-bottom: 73px;
     padding-top: 67px;
 }
 
@@ -1549,8 +1551,247 @@ h6 {
     padding-bottom: 50px;
 }
 
+.cmt{
+    padding-top: 0px;
+}
 
+.cmt-img{
+    position: relative;
+}
+.cmt-img::after{
+    content:"";
+    background: #000;
+z-index:121 ;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+border-radius: 4.50007px;
+    left: 0;
+}
 
+.date-flex {
+    margin-top: 21px;
+}
+
+.date-flex ul li {
+    margin-right: 24px;
+}
+.date-flex ul li span, a{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 19.2066px;
+line-height: 102%;
+color: #989898;
+}
+.date-flex ul li i{
+    color:#D60201;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.date-text{
+    margin-top: 51px;
+}
+
+.date-text .dt-title1{
+    margin-bottom: 42px;
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 102%;
+color: #232323;
+}
+
+.date-text .dt-1{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 140%;
+color: #5E5E5E;
+margin-bottom: 46px;
+}
+.date-text  .dt-2{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 140%;
+    color: #5E5E5E;
+}
+
+.date-text .dt-title2{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+margin-top: 53px;
+font-size: 30px;
+line-height: 102%;
+color: #232323;
+margin-bottom: 25px;
+}  
+
+.yorumlar .yorum-title{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+margin-top: 50px;
+line-height: 130%;
+margin-bottom: 44px;
+color: #232323;
+}
+.comment-box{
+    background: #FFFFFF;
+box-shadow: 0px 5.30479px 11.6705px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+padding-top: 40px;
+padding-left: 43px;
+padding-right: 145px;
+padding-bottom: 41px;
+position: relative;
+margin-bottom: 24px;
+}
+.comment-box:last-child{
+    margin-bottom: 0;
+}
+
+.reply {
+    position: absolute;
+    right: 64px;
+    top:40px;
+}
+.reply button{
+    border: none;
+    background: transparent;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+color: #AD2F2F;
+}
+.reply i{
+    margin-right: 6px;
+    color:#AD2F2F
+}
+.comment-box .comment-text{
+    display:flex;
+}
+
+.comment-box .comment-text .m-div{
+    margin-left: 18px;
+}
+
+.comment-box .comment-text .m-div .user-name{
+    
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+margin-bottom: 4px;
+color: #D60201;
+}
+
+.comment-box .comment-text .m-div .user-date{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+margin-bottom: 10px;
+color: #747474;
+}
+
+.comment-box .comment-text .m-div .user-textarea{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 23px;
+color: #747474;
+}
+
+.yorum-yaz{
+    margin-top: 64px;
+}
+.yorum-yaz h3{
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 130%;
+color: #232323;
+margin-bottom: 30px;
+}
+
+.yorum-yaz .get-btn{
+    margin-top: 33px;
+}
+
+.yorum-yaz form input{
+    width: 100%;
+    height: 87px;
+    background: #FFFFFF;
+box-shadow: 0px 5.30479px 11.6705px rgba(0, 0, 0, 0.1);
+border-radius: 16.1526px;
+border: none;
+}
+
+.yorum-yaz form #input-name{
+padding-left: 50px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 22.8442px;
+line-height: 30px;
+color: #B4B4B4;
+margin-right: 22px;
+}
+
+.yorum-yaz form #input-epost{
+    padding-left: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22.8442px;
+    line-height: 30px;
+    color: #B4B4B4;
+}
+.yorum-yaz form  .form-flex{
+    display: flex;
+}
+.yorum-yaz form  #text-area{
+    padding-top: 30px;
+    margin-top: 24px;
+    width: 100%;
+      background: #FFFFFF;
+box-shadow: 0px 5.30479px 11.6705px rgba(0, 0, 0, 0.1);
+border-radius: 16.1526px;
+border: none;
+padding-left: 50px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 22.8442px;
+line-height: 30px;
+color: #B4B4B4;
+height: 252px;
+resize: none;
+}
+
+.cmt-main{
+    background: url(../img/building-big.png);
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    padding-bottom: 73px;
+    padding-top: 57px;
+}
 @media only screen and (max-width:1400px) {
     .vide-slider .video-item .img {
         width: 355px !important;
@@ -1676,6 +1917,13 @@ h6 {
 }
 
 @media only screen and (max-width:992px) {
+    .cmt-main {
+        padding-top: 0;
+    background-size: contain;
+    }
+    .cmt {
+        padding-top: 20px;
+    }
     .blog{
         background-size: contain !important;
     }
@@ -1845,7 +2093,32 @@ h6 {
 }
 
 @media only screen and (max-width:768px) {
-
+.user-name{
+    text-align: center;
+}
+.user-date{
+    text-align: center;
+}
+.comment-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comment-box {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    align-items: center;
+    padding-right: 43px;
+}
+    .date-text .dt-title1,.dt-title2 {
+        font-size: 25px !important;
+    }
+    .date-text .dt-1{
+        margin-bottom: 30px;
+    }
+    .date-text .dt-1,.dt-2,.dt-3{
+        font-size: 15px !important;
+    }
     .all-right #tag,
     #category,
     #text-video {
@@ -1907,6 +2180,42 @@ h6 {
 }
 
 @media only screen and (max-width:600px) {
+    .yorum-yaz form .form-flex{
+flex-direction: column;
+    }
+    .yorum-yaz form input{
+        margin: 0 !important;
+    }
+    .yorum-yaz form #input-name{
+        font-size: 19px;
+        margin-bottom: 25px !important;
+    }
+    .yorum-yaz form #input-epost{
+        font-size: 19px;
+    }
+    .yorum-yaz form #text-area {
+        font-size: 19px;
+
+    }
+    .get-btn{
+        justify-content: center !important;
+    }
+    .dt-title1, .dt-title2{
+        margin-bottom: 30px !important;
+    }
+    .yorumlar .yorum-title{
+        margin-bottom: 30px;
+    }
+    .dt-title1, .dt-title2, .yorum-title, .yorumyaz-title{
+        text-align: center;
+    }
+    .reply {
+        right: 26px;
+    }
+    .comment-box {
+        padding: 20px 20px;
+        align-items: center;
+    }
     .all-video {
         padding-bottom: 60px;
     }

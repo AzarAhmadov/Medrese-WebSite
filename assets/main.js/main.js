@@ -1,4 +1,3 @@
-
 const list_li = document.querySelectorAll('.nav-list')
 const nav_link = document.querySelectorAll('.nav-link')
 
@@ -23,8 +22,8 @@ const blogMobil = document.querySelector('.blog-mobil')
 const opBlog = document.querySelector('.op-mobil')
 const blogArrow = document.querySelector('.blog-arrow')
 
-opBlog.addEventListener('click', function(){
-blogMobil.classList.toggle('active')
+opBlog.addEventListener('click', ()=>{
+  blogMobil.classList.toggle('active')
 blogMobil.classList.toggle('actives')
 blogArrow.classList.toggle('active')
 })
