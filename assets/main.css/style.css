@@ -708,11 +708,15 @@ h6 {
     position: absolute;
     top: 41px;
     content: "";
+    
 }
 
 .vide-slider .swiper-button-next {
+    border: 1px solid var(--first_color);
+    border-radius: 50%;
     background: url('../img/chevron-down\ \(1\).png');
     content: "";
+    right: -65px;
     height: 55px;
     width: 55px;
     background-size: cover;
@@ -720,9 +724,12 @@ h6 {
 }
 
 .vide-slider .swiper-button-prev {
+    border: 1px solid var(--first_color);
+    border-radius: 50%;
     background: url('../img/chevron-down.png');
     content: "";
     height: 55px;
+    left: -65px;
     width: 55px;
     background-size: cover;
 }
@@ -2122,6 +2129,12 @@ color: #5E5E5E;
 }
 
 @media only screen and (max-width:1200px) {
+    .vide-slider .swiper-button-prev{
+        left: -35px !important;
+    }
+    .vide-slider .swiper-button-next {
+        right: -35px;
+    }
     .pod-col{
         grid-template-columns: repeat(3,1fr);
     }
@@ -2414,6 +2427,12 @@ color: #5E5E5E;
 
     .all-video {
         background-size: contain;
+    }
+    .vide-slider .swiper-button-prev{
+        left: 0px  !important;
+    }
+    .vide-slider .swiper-button-next {
+        right: 0px;
     }
 
 }
@@ -2763,6 +2782,14 @@ flex-direction: column;
 }
 
 @media only screen and (max-width:478px) {
+      .vide-slider .swiper-button-prev{
+        height: 40px;
+        width: 40px;
+    }
+    .vide-slider .swiper-button-next {
+        height: 40px;
+    width: 40px;
+    }
     .music-top span {
         font-size: 20px;
     }
