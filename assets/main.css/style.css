@@ -586,17 +586,18 @@ h6 {
     padding-right: 20px;
 }
 
-.video-item .video-dec p {
+.video-item .video-dec p a {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 102%;
+    display: block;
     margin-bottom: 27px;
     color: #313030;
 }
 
-.video-item .video-dec a {
+.video-item .video-dec .izle-link {
     width: 129.03px;
     height: 47.4px;
     background: #D60201;
@@ -613,7 +614,7 @@ h6 {
     transition: 400ms all;
 }
 
-.video-item .video-dec a:hover {
+.video-item .video-dec .izle-link:hover {
     background: transparent;
     border: 1px solid #D60201;
     color: #000;
@@ -1422,7 +1423,7 @@ color: #FFFFFF;
     margin-top: 99px;
 }
 
-.all-video-item-dec a {
+.all-video-item-dec .izle-btn-2 {
     margin-top: 25px;
     font-family: 'Roboto';
     font-style: normal;
@@ -1441,14 +1442,14 @@ color: #FFFFFF;
 }
 
 
-.all-video-item-dec a:hover {
+.all-video-item-dec .izle-btn-2:hover {
     background: transparent;
     border: 1px solid #D60201;
     color: #000;
 
 }
 
-.all-video-item .all-video-item-dec .video-p {
+.all-video-item .all-video-item-dec .video-p a{
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
