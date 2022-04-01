@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="assets/main.css/bootstrap.css.map" />
     <link rel="stylesheet" href="assets/main.css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/main.css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -122,15 +117,17 @@
                 <div class="music-name">
                   <div class="music-top">
                     <i class="fa-solid fa-play top-i"></i>
-                    <span> Dolor sit amet, consectetur adipiscing </span>
+                    <span class="player-name">
+                      Dolor sit amet, consectetur adipiscing
+                    </span>
                   </div>
                   <span class="music-time"> Süre : 3 dk 25s </span>
                   <div class="music-load">
-                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-play top-play"></i>
                     <div class="music-width">
                       <div class="music-i"></div>
                     </div>
-                    <i class="fa-solid fa-volume-high"></i>
+                    <i class="fa-solid fa-volume-high value"></i>
                   </div>
                 </div>
               </div>
@@ -179,7 +176,7 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-play music-play"></i>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -189,7 +186,7 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-play music-play2"></i>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -199,7 +196,7 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-play music-play3"></i>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -436,6 +433,87 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+
+      // music player 1
+      const playerName = document.querySelector('.player-name');
+
+      var music =  new Audio();
+        music.src = 'assets/audio/music1.mp3';
+        music.loop = true;
+        music.name = 'Piano muzigi'
+
+      function mulaiAudio(){
+        const musicPlay1 = document.querySelector(".music-play");
+        musicPlay1.addEventListener('click', function(){
+         if(music.paused){
+           music.play()
+           playerName.innerHTML = music.name
+           musicPlay1.classList.remove('fa-play');
+          musicPlay1.classList.toggle('fa-pause');
+         }else{
+          music.pause()
+          musicPlay1.classList.add('fa-play');
+          musicPlay1.classList.remove('fa-pause');
+
+         }
+        })
+      }
+   
+      window.addEventListener('load', mulaiAudio)
+
+        // music player 2
+        var music2 =  new Audio();
+        music2.src = 'assets/audio/music2.mp3';
+        music2.loop = true;
+        music2.name = 'Piano muzigi 2'
+
+        musicPlay2 = document.querySelector('.music-play2')
+        
+      function mulaiAudio2(){
+        musicPlay2.addEventListener('click', function(){
+          if(music2.paused){
+            music2.play()
+           playerName.innerHTML = music2.name
+           musicPlay2.classList.remove('fa-play');
+           musicPlay2.classList.toggle('fa-pause');
+         }else{
+          music2.pause()
+          musicPlay2.classList.add('fa-play');
+          musicPlay2.classList.remove('fa-pause');
+         }
+        })
+      }
+      
+      window.addEventListener('load', mulaiAudio2)
+        
+         // music player 3
+         var music3 =  new Audio();
+        music3.src = 'assets/audio/music3.mp3';
+        music3.loop = true;
+        music3.name = 'Piano muzigi 3'
+        duration = music3.duration
+
+      function mulaiAudio3(){
+        musicPlay3 = document.querySelector('.music-play3')
+        musicPlay3.addEventListener('click', function(){
+          if(music3.paused){
+            music3.play()
+           playerName.innerHTML = music3.name
+           musicPlay3.classList.remove('fa-play');
+           musicPlay3.classList.toggle('fa-pause');
+         }else{
+          music3.pause()
+          musicPlay3.classList.add('fa-play');
+          musicPlay3.classList.remove('fa-pause');
+         }
+        })
+      }
+      
+      window.addEventListener('load', mulaiAudio3)
+
+      const value = document.querySelector('.value');
+      const top_music_control = document.querySelector('.top-play')      
+
       var swiper9 = new Swiper(".swiper-container9", {
         slidesPerView: 3,
         spaceBetween: 0,

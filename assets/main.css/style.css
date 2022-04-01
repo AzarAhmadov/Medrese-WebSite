@@ -1889,6 +1889,9 @@ border-radius: 8.16092px;
     display: flex;
     align-items: center;
 }
+.music-name{
+    width: 100%;
+}
 .music-player .top-i{
     width: 59px;
 height: 59px;
@@ -2002,6 +2005,7 @@ font-size: 20px;
 height: 55px;
 border-radius: 50%;
 display: flex;
+cursor: pointer;
 color:#fff;
 align-items: center;
 justify-content: center;
