@@ -1908,7 +1908,7 @@ flex-shrink: 0;
     align-items: center;
 }
 
-.music-top span{
+.music-top p{
     font-family: 'Quicksand';
 font-style: normal;
 font-weight: 700;
@@ -1955,7 +1955,7 @@ height: 10px;
     left: 0;
     content:"";
     background: #FFFFFF;
-    width: 306px;
+    width: 50%;
 height: 10px;
 border-radius: 48px;
 }
@@ -1998,6 +1998,10 @@ margin-bottom: 9px;
     transform: translateY(20px);
 }
 
+.firstSongPlayBTN , .secondSongPlayBTN , .threethSongPlayBTN {
+    border: none;
+    background: transparent;
+}
 
 .music-right i{
 font-size: 20px;
@@ -2079,11 +2083,47 @@ color: #5E5E5E;
     top: 18px;
 
 }
+#duration_slider{
+    width: 451px;
+    margin: 0 24px;
+}
+
+input[type='range'] {
+    overflow: hidden;
+    width: 80px;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 48px;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color:#fff;
+    margin-top: -1px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 10%;
+    -webkit-appearance: none;
+    height: 10px;
+    border-radius: 48px;
+    cursor: ew-resize;
+    background: #fff;
+  }
+
+
+
 
 .all-right #tag,
     #category{
         width: 165px;
-    }
+}
+
+.muteBTN , .playBTN{
+    background: transparent;
+    border: none;
+}
 @media only screen and (max-width:1400px) {
     .pod-col{
         display: grid !important;
@@ -2485,7 +2525,7 @@ color: #5E5E5E;
         height: 45px;
     }
     .music-i{
-        width: 100%;
+        width: 0%;
     }
     .music-load .music-width{
         width: 100%;
@@ -2494,7 +2534,7 @@ color: #5E5E5E;
         width: 49px;
         height: 49px;
     }
-    .music-top span{
+    .music-top p{
         font-size: 25px;
     }
     .music-left p{
@@ -2799,7 +2839,8 @@ flex-direction: column;
     width: 40px;
     background-size: 13px !important;
     }
-    .music-top span {
+    .music-top p {
+        margin-left: 10px;
         font-size: 20px;
     }
     .ms-title{

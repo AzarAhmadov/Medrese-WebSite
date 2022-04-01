@@ -117,17 +117,14 @@
                 <div class="music-name">
                   <div class="music-top">
                     <i class="fa-solid fa-play top-i"></i>
-                    <span class="player-name">
-                      Dolor sit amet, consectetur adipiscing
-                    </span>
+                    <p style="color: white;" id="title">title.mp3</p>
                   </div>
-                  <span class="music-time"> Süre : 3 dk 25s </span>
+                  <span class="music-time "> Süre :
+                    <span class="main-music-time"></span> </span>
                   <div class="music-load">
-                    <i class="fa-solid fa-play top-play"></i>
-                    <div class="music-width">
-                      <div class="music-i"></div>
-                    </div>
-                    <i class="fa-solid fa-volume-high value"></i>
+                    <button class="playBTN" onclick="justplay()"><i class="fa-solid fa-play top-play"></i></button>
+                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+                    <button class="muteBTN" onclick="mute_sound()"><i class="fa-solid fa-volume-high value"></i></button>
                   </div>
                 </div>
               </div>
@@ -148,7 +145,7 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span>Süre : 3 dk 25s</span>
+                  <span>Süre : 3 dk 25s<span class="firstMusicTime bottomMusicTime"></span></span>
                 </div>
               </div>
               <div class="music-left d-flex justify-content-start">
@@ -157,7 +154,7 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span>Süre : 3 dk 25s</span>
+                  <span>Süre : 3 dk 25s<span class="firstMusicTime bottomMusicTime"></span></span>
                 </div>
               </div>
               <div class="music-left d-flex justify-content-start">
@@ -166,7 +163,7 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span>Süre : 3 dk 25s</span>
+                  <span>Süre : 3 dk 25s<span class="firstMusicTime bottomMusicTime"></span></span>
                 </div>
               </div>
             </div>
@@ -176,7 +173,7 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <i class="fa-solid fa-play music-play"></i>
+                    <button class="firstSongPlayBTN playsongsBTNs" onclick="playFirstSong()"><i class="fa-solid fa-play music-play"></i></button>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -186,7 +183,7 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <i class="fa-solid fa-play music-play2"></i>
+                    <button class="secondSongPlayBTN playsongsBTNs" onclick="playSecondSong()"><i class="fa-solid fa-play music-play"></i></button>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -196,7 +193,7 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <i class="fa-solid fa-play music-play3"></i>
+                    <button class="threethSongPlayBTN playsongsBTNs" onclick="playThreethSong()"><i class="fa-solid fa-play music-play"></i></button>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -433,86 +430,162 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+      let title = document.querySelector("#title");
+      let play = document.querySelectorAll(".playBTN")
+      let slider = document.querySelector("#duration_slider");
+      let threethSongPlayBTN = document.querySelector('.threethSongPlayBTN')
+      let firstSongPlayBTN = document.querySelector('.firstSongPlayBTN')
+      let secondSongPlayBTN = document.querySelector('.secondSongPlayBTN')
+      let playsongsBTNs = document.querySelectorAll('.playsongsBTNs');
+      let main_music_time = document.querySelector('.main-music-time') 
+      let threethMusicTime = document.querySelector('.threethMusicTime')
+      let firstMusicTime = document.querySelector('.firstMusicTime')
+      let secondMusicTime = document.querySelector('.secondMusicTime')
+      let bottomMusicTime = document.querySelectorAll('.bottomMusicTime')
+      let mute = false;
+      let isFirstTimePlay = true;
+      let timer;
+      let autoplay = 0;
 
-      // music player 1
-      const playerName = document.querySelector('.player-name');
+      let index_no = 0;
+      let playing_song = false;
 
-      var music =  new Audio();
-        music.src = 'assets/audio/music1.mp3';
-        music.loop = true;
-        music.name = 'Piano muzigi'
+      // create a audio Element
+      let track = document.createElement('audio');
+      main_music_time.innerHTML
+      // All songs list
+      let All_songs = [
+          {
+              name: "first song",
+              path: "assets/audio/music1.mp3",
+              singer: "first singer"
+          },
+          {
+              name: "second song",
+              path: "assets/audio/music2.mp3",
+              singer: "second singer"
+          },
+          {
+              name: "thrid song",
+              path: "assets/audio/music3.mp3",
+              singer: "thrid singer"
+          }
+      ];
+      // function load the track
+     function load_track(index_no){
+        clearInterval(timer);
+          
+        // bottomMusicTime[0].innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`   
+          track.src = All_songs[index_no].path;
+          title.innerHTML = All_songs[index_no].name;
+          track.load();
 
-      function mulaiAudio(){
-        const musicPlay1 = document.querySelector(".music-play");
-        musicPlay1.addEventListener('click', function(){
-         if(music.paused){
-           music.play()
-           playerName.innerHTML = music.name
-           musicPlay1.classList.remove('fa-play');
-          musicPlay1.classList.toggle('fa-pause');
-         }else{
-          music.pause()
-          musicPlay1.classList.add('fa-play');
-          musicPlay1.classList.remove('fa-pause');
 
-         }
-        })
+          main_music_time.innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`
+          
+          timer = setInterval(range_slider , 1000);
       }
-   
-      window.addEventListener('load', mulaiAudio)
-
-        // music player 2
-        var music2 =  new Audio();
-        music2.src = 'assets/audio/music2.mp3';
-        music2.loop = true;
-        music2.name = 'Piano muzigi 2'
-
-        musicPlay2 = document.querySelector('.music-play2')
-        
-      function mulaiAudio2(){
-        musicPlay2.addEventListener('click', function(){
-          if(music2.paused){
-            music2.play()
-           playerName.innerHTML = music2.name
-           musicPlay2.classList.remove('fa-play');
-           musicPlay2.classList.toggle('fa-pause');
-         }else{
-          music2.pause()
-          musicPlay2.classList.add('fa-play');
-          musicPlay2.classList.remove('fa-pause');
-         }
-        })
-      }
+      load_track(index_no);
       
-      window.addEventListener('load', mulaiAudio2)
-        
-         // music player 3
-         var music3 =  new Audio();
-        music3.src = 'assets/audio/music3.mp3';
-        music3.loop = true;
-        music3.name = 'Piano muzigi 3'
-        duration = music3.duration
+      // mute song
+      function mute_sound(){
+          if(mute == false){
+            track.volume = 1;
+            mute = true;
+          }
+          else{
+            track.volume = 0;
+            mute = false;
+          }
 
-      function mulaiAudio3(){
-        musicPlay3 = document.querySelector('.music-play3')
-        musicPlay3.addEventListener('click', function(){
-          if(music3.paused){
-            music3.play()
-           playerName.innerHTML = music3.name
-           musicPlay3.classList.remove('fa-play');
-           musicPlay3.classList.toggle('fa-pause');
-         }else{
-          music3.pause()
-          musicPlay3.classList.add('fa-play');
-          musicPlay3.classList.remove('fa-pause');
-         }
-        })
+
       }
-      
-      window.addEventListener('load', mulaiAudio3)
+      // reset long slider
+      function reset_slider(){
+          slider.value = 0;
+      }
+      // checking the song is playing or not
+      function justplay(){
+          if(playing_song==false){
+              playsong();
+          }
+          else{
+              pausesong();
+          }
+      }
+      function playFirstSong(){
+        load_track(0);
+        playsong();
+        for(let i = 0 ; i < playsongsBTNs.length ; i++){
+          playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
+        }
+        firstSongPlayBTN.innerHTML = '<i class="fa-solid fa-stop music-play"></i>'
+        
+      }
+      function playSecondSong(){
+        load_track(1);
+        playsong();
+        for(let i = 0 ; i < playsongsBTNs.length ; i++){
+          playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
+        }
+        secondSongPlayBTN.innerHTML = '<i class="fa-solid fa-stop music-play"></i>'
+        
+      }
+      function playThreethSong(){
+        load_track(2);
+        playsong();
+        for(let i = 0 ; i < playsongsBTNs.length ; i++){
+          playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
+        }
+        threethSongPlayBTN.innerHTML = '<i class="fa-solid fa-stop music-play"></i>'
+        
+      }
+      // play song
+      function playsong(){
+          track.play();
+          playing_song = true;
+          for(let i= 0 ; i < play.length;i++){
+            play[i].innerHTML = '<i class="fas fa-pause"></i>';
+          }
+          if(isFirstTimePlay == true){
+            for(let i = 0 ; i < playsongsBTNs.length ; i++){
+              playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
+            }
+            firstSongPlayBTN.innerHTML = '<i class="fa-solid fa-stop music-play"></i>'
+            isFirstTimePlay = false;
+          }
+          
+      }
+      // pause song
+      function pausesong(){
+          track.pause();
+          playing_song = false;
+          for(let i= 0 ; i < play.length;i++){
+            play[i].innerHTML = '<i class="fas fa-play"></i>';
+          }
+      }
+  
+      function change_duration(){
+          slider_position = track.duration * (slider.value / 100)
+          track.currentTime = slider_position;
+      }
 
-      const value = document.querySelector('.value');
-      const top_music_control = document.querySelector('.top-play')      
+      function  range_slider(){
+          let position = 0;
+
+          // uptade slider
+          if(!isNaN(track.duration)){
+              position = track.currentTime * (100 / track.duration);
+              slider.value = position;
+          }
+          main_music_time.innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`
+  
+      if(track.ended){
+          play.innerHTML = '<i class = "fas fa-play"></i>';
+    
+      }
+      }
+ 
 
       var swiper9 = new Swiper(".swiper-container9", {
         slidesPerView: 3,
