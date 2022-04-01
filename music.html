@@ -145,7 +145,7 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span>Süre : 3 dk 25s<span class="firstMusicTime bottomMusicTime"></span></span>
+                  <span><span class="firstMusicTime music-value bottomMusicTime"></span></span>
                 </div>
               </div>
               <div class="music-left d-flex justify-content-start">
@@ -154,7 +154,7 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span>Süre : 3 dk 25s<span class="firstMusicTime bottomMusicTime"></span></span>
+                  <span><span class="firstMusicTime music-value2 bottomMusicTime"></span></span>
                 </div>
               </div>
               <div class="music-left d-flex justify-content-start">
@@ -163,7 +163,7 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span>Süre : 3 dk 25s<span class="firstMusicTime bottomMusicTime"></span></span>
+                  <span><span class="firstMusicTime music-value3 bottomMusicTime"></span></span>
                 </div>
               </div>
             </div>
@@ -442,11 +442,14 @@
       let firstMusicTime = document.querySelector('.firstMusicTime')
       let secondMusicTime = document.querySelector('.secondMusicTime')
       let bottomMusicTime = document.querySelectorAll('.bottomMusicTime')
+      let musicValue = document.querySelector('.music-value')
+      let musicValue2 = document.querySelector('.music-value2')
+      let musicValue3 = document.querySelector('.music-value3')
       let mute = false;
       let isFirstTimePlay = true;
       let timer;
       let autoplay = 0;
-
+      
       let index_no = 0;
       let playing_song = false;
 
@@ -458,7 +461,7 @@
           {
               name: "first song",
               path: "assets/audio/music1.mp3",
-              singer: "first singer"
+              singer: "first singer",
           },
           {
               name: "second song",
@@ -471,19 +474,21 @@
               singer: "thrid singer"
           }
       ];
+      musicValue.innerHTML = `${'Süre : 2 dk 25s'}`
+      musicValue2.innerHTML = `${'Süre : 1 dk 25s'}`
+      musicValue3.innerHTML = `${'Süre : 4 dk 25s'}`
       // function load the track
      function load_track(index_no){
-        clearInterval(timer);
+        setInterval(timer);
           
         // bottomMusicTime[0].innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`   
           track.src = All_songs[index_no].path;
           title.innerHTML = All_songs[index_no].name;
+        main_music_time.innerHTML = '2 dk 25s'
           track.load();
 
-
-          main_music_time.innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`
-          
-          timer = setInterval(range_slider , 1000);
+          // timer = setInterval(range_slider , 0);
+          // main_music_time.innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`
       }
       load_track(index_no);
       
@@ -497,8 +502,6 @@
             track.volume = 0;
             mute = false;
           }
-
-
       }
       // reset long slider
       function reset_slider(){
@@ -516,6 +519,7 @@
       function playFirstSong(){
         load_track(0);
         playsong();
+        main_music_time.innerHTML = '2 dk 25s'
         for(let i = 0 ; i < playsongsBTNs.length ; i++){
           playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
         }
@@ -525,6 +529,7 @@
       function playSecondSong(){
         load_track(1);
         playsong();
+        main_music_time.innerHTML = '1 dk 25s'
         for(let i = 0 ; i < playsongsBTNs.length ; i++){
           playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
         }
@@ -534,6 +539,7 @@
       function playThreethSong(){
         load_track(2);
         playsong();
+        main_music_time.innerHTML = '4 dk 25s'
         for(let i = 0 ; i < playsongsBTNs.length ; i++){
           playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
         }
