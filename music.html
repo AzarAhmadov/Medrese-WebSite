@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medrese</title>
+    <link rel="stylesheet" href="assets/main.css/bootstrap.css" />
     <link rel="stylesheet" href="assets/main.css/bootstrap.css.map" />
-    <link rel="stylesheet" href="assets/main.css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/main.css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="assets/main.css/swiper-bundle.min.css" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="body">
     <header class="header-top">
       <div
@@ -108,6 +111,7 @@
         </div>
       </div>
     </header>
+
     <main class="music-main">
       <section class="music-banner">
         <div class="container">
@@ -117,14 +121,26 @@
                 <div class="music-name">
                   <div class="music-top">
                     <i class="fa-solid fa-play top-i"></i>
-                    <p style="color: white;" id="title">title.mp3</p>
+                    <p style="color: white" id="title">title.mp3</p>
                   </div>
-                  <span class="music-time "> Süre :
-                    <span class="main-music-time"></span> </span>
+                  <span class="music-time">
+                    Süre : <span class="main-music-time"></span>
+                  </span>
                   <div class="music-load">
-                    <button class="playBTN" onclick="justplay()"><i class="fa-solid fa-play top-play"></i></button>
-                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
-                    <button class="muteBTN" onclick="mute_sound()"><i class="fa-solid fa-volume-high value"></i></button>
+                    <button class="playBTN" onclick="justplay()">
+                      <i class="fa-solid fa-play top-play"></i>
+                    </button>
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="0"
+                      id="duration_slider"
+                      onchange="change_duration()"
+                    />
+                    <button class="muteBTN" onclick="mute_sound()">
+                      <i class="fa-solid fa-volume-high value"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -145,7 +161,11 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span><span class="firstMusicTime music-value bottomMusicTime"></span></span>
+                  <span
+                    ><span
+                      class="firstMusicTime music-value bottomMusicTime"
+                    ></span
+                  ></span>
                 </div>
               </div>
               <div class="music-left d-flex justify-content-start">
@@ -154,7 +174,11 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span><span class="firstMusicTime music-value2 bottomMusicTime"></span></span>
+                  <span
+                    ><span
+                      class="firstMusicTime music-value2 bottomMusicTime"
+                    ></span
+                  ></span>
                 </div>
               </div>
               <div class="music-left d-flex justify-content-start">
@@ -163,7 +187,11 @@
                 </div>
                 <div class="music-item">
                   <p>Dolor sit amet, consectetur adipiscing</p>
-                  <span><span class="firstMusicTime music-value3 bottomMusicTime"></span></span>
+                  <span
+                    ><span
+                      class="firstMusicTime music-value3 bottomMusicTime"
+                    ></span
+                  ></span>
                 </div>
               </div>
             </div>
@@ -173,7 +201,12 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <button class="firstSongPlayBTN playsongsBTNs" onclick="playFirstSong()"><i class="fa-solid fa-play music-play"></i></button>
+                    <button
+                      class="firstSongPlayBTN playsongsBTNs"
+                      onclick="playFirstSong()"
+                    >
+                      <i class="fa-solid fa-play music-play"></i>
+                    </button>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -183,7 +216,12 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <button class="secondSongPlayBTN playsongsBTNs" onclick="playSecondSong()"><i class="fa-solid fa-play music-play"></i></button>
+                    <button
+                      class="secondSongPlayBTN playsongsBTNs"
+                      onclick="playSecondSong()"
+                    >
+                      <i class="fa-solid fa-play music-play"></i>
+                    </button>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -193,7 +231,12 @@
               <div class="music-right">
                 <ul class="d-flex">
                   <li>
-                    <button class="threethSongPlayBTN playsongsBTNs" onclick="playThreethSong()"><i class="fa-solid fa-play music-play"></i></button>
+                    <button
+                      class="threethSongPlayBTN playsongsBTNs"
+                      onclick="playThreethSong()"
+                    >
+                      <i class="fa-solid fa-play music-play"></i>
+                    </button>
                   </li>
                   <li>
                     <i class="fa-solid fa-download"></i>
@@ -428,170 +471,172 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/main.js/swiper-bundle.min.js"></script>
     <script>
       let title = document.querySelector("#title");
-      let play = document.querySelectorAll(".playBTN")
+      let play = document.querySelectorAll(".playBTN");
       let slider = document.querySelector("#duration_slider");
-      let threethSongPlayBTN = document.querySelector('.threethSongPlayBTN')
-      let firstSongPlayBTN = document.querySelector('.firstSongPlayBTN')
-      let secondSongPlayBTN = document.querySelector('.secondSongPlayBTN')
-      let playsongsBTNs = document.querySelectorAll('.playsongsBTNs');
-      let main_music_time = document.querySelector('.main-music-time') 
-      let threethMusicTime = document.querySelector('.threethMusicTime')
-      let firstMusicTime = document.querySelector('.firstMusicTime')
-      let secondMusicTime = document.querySelector('.secondMusicTime')
-      let bottomMusicTime = document.querySelectorAll('.bottomMusicTime')
-      let musicValue = document.querySelector('.music-value')
-      let musicValue2 = document.querySelector('.music-value2')
-      let musicValue3 = document.querySelector('.music-value3')
+      let threethSongPlayBTN = document.querySelector(".threethSongPlayBTN");
+      let firstSongPlayBTN = document.querySelector(".firstSongPlayBTN");
+      let secondSongPlayBTN = document.querySelector(".secondSongPlayBTN");
+      let playsongsBTNs = document.querySelectorAll(".playsongsBTNs");
+      let main_music_time = document.querySelector(".main-music-time");
+      let threethMusicTime = document.querySelector(".threethMusicTime");
+      let firstMusicTime = document.querySelector(".firstMusicTime");
+      let secondMusicTime = document.querySelector(".secondMusicTime");
+      let bottomMusicTime = document.querySelectorAll(".bottomMusicTime");
+      let musicValue = document.querySelector(".music-value");
+      let musicValue2 = document.querySelector(".music-value2");
+      let musicValue3 = document.querySelector(".music-value3");
       let mute = false;
       let isFirstTimePlay = true;
       let timer;
       let autoplay = 0;
-      
+
       let index_no = 0;
       let playing_song = false;
 
       // create a audio Element
-      let track = document.createElement('audio');
-      main_music_time.innerHTML
+      let track = document.createElement("audio");
+      main_music_time.innerHTML;
       // All songs list
       let All_songs = [
-          {
-              name: "first song",
-              path: "assets/audio/music1.mp3",
-              singer: "first singer",
-          },
-          {
-              name: "second song",
-              path: "assets/audio/music2.mp3",
-              singer: "second singer"
-          },
-          {
-              name: "thrid song",
-              path: "assets/audio/music3.mp3",
-              singer: "thrid singer"
-          }
+        {
+          name: "first song",
+          path: "assets/audio/music1.mp3",
+          singer: "first singer",
+        },
+        {
+          name: "second song",
+          path: "assets/audio/music2.mp3",
+          singer: "second singer",
+        },
+        {
+          name: "thrid song",
+          path: "assets/audio/music3.mp3",
+          singer: "thrid singer",
+        },
       ];
-      musicValue.innerHTML = `${'Süre : 2 dk 25s'}`
-      musicValue2.innerHTML = `${'Süre : 1 dk 25s'}`
-      musicValue3.innerHTML = `${'Süre : 4 dk 25s'}`
+      musicValue.innerHTML = `${"Süre : 2 dk 25s"}`;
+      musicValue2.innerHTML = `${"Süre : 1 dk 25s"}`;
+      musicValue3.innerHTML = `${"Süre : 4 dk 25s"}`;
       // function load the track
-     function load_track(index_no){
+      function load_track(index_no) {
         setInterval(timer);
-          
-        // bottomMusicTime[0].innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`   
-          track.src = All_songs[index_no].path;
-          title.innerHTML = All_songs[index_no].name;
-        main_music_time.innerHTML = '2 dk 25s'
-          track.load();
 
-          // timer = setInterval(range_slider , 0);
-          // main_music_time.innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`
+        // bottomMusicTime[0].innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`
+        track.src = All_songs[index_no].path;
+        title.innerHTML = All_songs[index_no].name;
+        main_music_time.innerHTML = "2 dk 25s";
+        track.load();
+
+        // timer = setInterval(range_slider , 0);
+        // main_music_time.innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`
       }
       load_track(index_no);
-      
+
       // mute song
-      function mute_sound(){
-          if(mute == false){
-            track.volume = 1;
-            mute = true;
-          }
-          else{
-            track.volume = 0;
-            mute = false;
-          }
+      function mute_sound() {
+        if (mute == false) {
+          track.volume = 1;
+          mute = true;
+        } else {
+          track.volume = 0;
+          mute = false;
+        }
       }
       // reset long slider
-      function reset_slider(){
-          slider.value = 0;
+      function reset_slider() {
+        slider.value = 0;
       }
       // checking the song is playing or not
-      function justplay(){
-          if(playing_song==false){
-              playsong();
-          }
-          else{
-              pausesong();
-          }
+      function justplay() {
+        if (playing_song == false) {
+          playsong();
+        } else {
+          pausesong();
+        }
       }
-      function playFirstSong(){
+      function playFirstSong() {
         load_track(0);
         playsong();
-        main_music_time.innerHTML = '2 dk 25s'
-        for(let i = 0 ; i < playsongsBTNs.length ; i++){
-          playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
+        main_music_time.innerHTML = "2 dk 25s";
+        for (let i = 0; i < playsongsBTNs.length; i++) {
+          playsongsBTNs[i].innerHTML =
+            '<i class="fa-solid fa-play music-play"></i>';
         }
-        firstSongPlayBTN.innerHTML = '<i class="fa-solid fa-stop music-play"></i>'
-        
+        firstSongPlayBTN.innerHTML =
+          '<i class="fa-solid fa-stop music-play"></i>';
       }
-      function playSecondSong(){
+      function playSecondSong() {
         load_track(1);
         playsong();
-        main_music_time.innerHTML = '1 dk 25s'
-        for(let i = 0 ; i < playsongsBTNs.length ; i++){
-          playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
+        main_music_time.innerHTML = "1 dk 25s";
+        for (let i = 0; i < playsongsBTNs.length; i++) {
+          playsongsBTNs[i].innerHTML =
+            '<i class="fa-solid fa-play music-play"></i>';
         }
-        secondSongPlayBTN.innerHTML = '<i class="fa-solid fa-stop music-play"></i>'
-        
+        secondSongPlayBTN.innerHTML =
+          '<i class="fa-solid fa-stop music-play"></i>';
       }
-      function playThreethSong(){
+      function playThreethSong() {
         load_track(2);
         playsong();
-        main_music_time.innerHTML = '4 dk 25s'
-        for(let i = 0 ; i < playsongsBTNs.length ; i++){
-          playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
+        main_music_time.innerHTML = "4 dk 25s";
+        for (let i = 0; i < playsongsBTNs.length; i++) {
+          playsongsBTNs[i].innerHTML =
+            '<i class="fa-solid fa-play music-play"></i>';
         }
-        threethSongPlayBTN.innerHTML = '<i class="fa-solid fa-stop music-play"></i>'
-        
+        threethSongPlayBTN.innerHTML =
+          '<i class="fa-solid fa-stop music-play"></i>';
       }
       // play song
-      function playsong(){
-          track.play();
-          playing_song = true;
-          for(let i= 0 ; i < play.length;i++){
-            play[i].innerHTML = '<i class="fas fa-pause"></i>';
+      function playsong() {
+        track.play();
+        playing_song = true;
+        for (let i = 0; i < play.length; i++) {
+          play[i].innerHTML = '<i class="fas fa-pause"></i>';
+        }
+        if (isFirstTimePlay == true) {
+          for (let i = 0; i < playsongsBTNs.length; i++) {
+            playsongsBTNs[i].innerHTML =
+              '<i class="fa-solid fa-play music-play"></i>';
           }
-          if(isFirstTimePlay == true){
-            for(let i = 0 ; i < playsongsBTNs.length ; i++){
-              playsongsBTNs[i].innerHTML = '<i class="fa-solid fa-play music-play"></i>'
-            }
-            firstSongPlayBTN.innerHTML = '<i class="fa-solid fa-stop music-play"></i>'
-            isFirstTimePlay = false;
-          }
-          
+          firstSongPlayBTN.innerHTML =
+            '<i class="fa-solid fa-stop music-play"></i>';
+          isFirstTimePlay = false;
+        }
       }
       // pause song
-      function pausesong(){
-          track.pause();
-          playing_song = false;
-          for(let i= 0 ; i < play.length;i++){
-            play[i].innerHTML = '<i class="fas fa-play"></i>';
-          }
-      }
-  
-      function change_duration(){
-          slider_position = track.duration * (slider.value / 100)
-          track.currentTime = slider_position;
+      function pausesong() {
+        track.pause();
+        playing_song = false;
+        for (let i = 0; i < play.length; i++) {
+          play[i].innerHTML = '<i class="fas fa-play"></i>';
+        }
       }
 
-      function  range_slider(){
-          let position = 0;
+      function change_duration() {
+        slider_position = track.duration * (slider.value / 100);
+        track.currentTime = slider_position;
+      }
 
-          // uptade slider
-          if(!isNaN(track.duration)){
-              position = track.currentTime * (100 / track.duration);
-              slider.value = position;
-          }
-          main_music_time.innerHTML = `${Math.floor((Math.floor(track.duration) / 60) * 100) / 100 } dk`
-  
-      if(track.ended){
+      function range_slider() {
+        let position = 0;
+
+        // uptade slider
+        if (!isNaN(track.duration)) {
+          position = track.currentTime * (100 / track.duration);
+          slider.value = position;
+        }
+        main_music_time.innerHTML = `${
+          Math.floor((Math.floor(track.duration) / 60) * 100) / 100
+        } dk`;
+
+        if (track.ended) {
           play.innerHTML = '<i class = "fas fa-play"></i>';
-    
+        }
       }
-      }
- 
 
       var swiper9 = new Swiper(".swiper-container9", {
         slidesPerView: 3,
@@ -620,6 +665,24 @@
         },
       });
     </script>
-    <script src="assets/main.js/main.js"></script>
+    <script>
+      const mobil_menu = document.querySelector(".mobil-menu");
+      const open_menu = document.querySelector(".open-menu");
+      const body = document.querySelector(".body");
+      const blogMobil = document.querySelector(".blog-mobil");
+      const opBlog = document.querySelector(".op-mobil");
+      const blogArrow = document.querySelector(".blog-arrow");
+
+      opBlog.addEventListener("click", () => {
+        blogMobil.classList.toggle("active");
+        blogMobil.classList.toggle("actives");
+        blogArrow.classList.toggle("active");
+      });
+
+      open_menu.addEventListener("click", function () {
+        mobil_menu.classList.toggle("active");
+        body.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

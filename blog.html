@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Medrese</title>
+  <link rel="stylesheet" href="assets/main.css/bootstrap.css" />
   <link rel="stylesheet" href="assets/main.css/bootstrap.css.map" />
-  <link rel="stylesheet" href="assets/main.css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/main.css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -133,7 +133,7 @@
           <div class="col-lg-4 blog-col  blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -158,7 +158,7 @@
           <div class="col-lg-4  blog-col  blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -183,7 +183,7 @@
           <div class="col-lg-4 blog-col  blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -208,7 +208,7 @@
           <div class="col-lg-4 blog-col  blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -233,7 +233,7 @@
           <div class="col-lg-4 blog-col  blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -258,7 +258,7 @@
           <div class="col-lg-4 blog-col  blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -283,7 +283,7 @@
           <div class="col-lg-4 blog-col  blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -308,7 +308,7 @@
           <div class="col-lg-4 blog-col  blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -333,7 +333,7 @@
           <div class="col-lg-4 blog-col blog-col2">
             <div class="blog-post">
               <a href="#">
-                <div class="blog-img"></div>
+                <img src="./assets/img/quran-gc7ced0b95_1920.png" class="blog-img"></img>
               </a>
               <div class="blog-detail">
                 <div class="time">
@@ -475,7 +475,43 @@
       </div>
     </div>
   </footer>
-  <script src="assets/main.js/main.js"></script>
+  <script>
+    const list_li = document.querySelectorAll('.nav-list')
+        const nav_link = document.querySelectorAll('.nav-link')
+
+        list_li.forEach((item) => {
+            item.addEventListener("click", () => {
+                document.querySelector(".nav-list.active-li").classList.remove("active-li");
+                item.classList.add("active-li");
+            });
+        });
+
+        nav_link.forEach((item) => {
+            item.addEventListener("click", () => {
+                document.querySelector(".nav-link.active").classList.remove("active");
+                item.classList.add("active");
+            });
+        });
+
+
+      const mobil_menu = document.querySelector('.mobil-menu')
+        const open_menu = document.querySelector('.open-menu')
+        const body = document.querySelector('.body')
+        const blogMobil = document.querySelector('.blog-mobil')
+        const opBlog = document.querySelector('.op-mobil')
+        const blogArrow = document.querySelector('.blog-arrow')
+
+        opBlog.addEventListener('click', () => {
+            blogMobil.classList.toggle('active')
+            blogMobil.classList.toggle('actives')
+            blogArrow.classList.toggle('active')
+        })
+
+        open_menu.addEventListener('click', function () {
+            mobil_menu.classList.toggle('active')
+            body.classList.toggle('active')
+        })
+  </script>
 </body>
 
 </html>

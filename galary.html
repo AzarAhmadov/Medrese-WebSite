@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medrese</title>
     <link rel="stylesheet" href="assets/main.css/bootstrap.css.map" />
-    <link rel="stylesheet" href="assets/main.css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/main.css/bootstrap.css" />
     <link rel="stylesheet" href="assets/main.css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
-<body>
+<body class="body">
     <header class="header-top">
         <div
           class="container ht-top d-flex align-items-center justify-content-between"
@@ -209,24 +208,25 @@
                             </div>
                         </a>
                     </div>
-                    <div class="next-prev-btn text-center">
-                        <a href="#">
-                            <i class="fa-solid fa-angle-left"></i>
-                        </a>
-                        <a href="#">
-                            1
-                        </a>
-                        <a href="#">
-                            2
-                        </a>
-                        <a href="#">
-                            3
-                        </a>
-                        <a href="#">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </a>
-                    </div>
+                  
                 </div>
+                <div class="next-prev-btn text-center">
+                  <a href="#">
+                      <i class="fa-solid fa-angle-left"></i>
+                  </a>
+                  <a href="#">
+                      1
+                  </a>
+                  <a href="#">
+                      2
+                  </a>
+                  <a href="#">
+                      3
+                  </a>
+                  <a href="#">
+                      <i class="fa-solid fa-angle-right"></i>
+                  </a>
+              </div>
             </div>
         </section>
         <div class="mobil-menu">
@@ -327,6 +327,42 @@
             </div>
         </div>
     </footer>
-    <script src="assets/main.js/main.js"></script>
+    <script>
+        const list_li = document.querySelectorAll('.nav-list')
+        const nav_link = document.querySelectorAll('.nav-link')
+
+        list_li.forEach((item) => {
+            item.addEventListener("click", () => {
+                document.querySelector(".nav-list.active-li").classList.remove("active-li");
+                item.classList.add("active-li");
+            });
+        });
+
+        nav_link.forEach((item) => {
+            item.addEventListener("click", () => {
+                document.querySelector(".nav-link.active").classList.remove("active");
+                item.classList.add("active");
+            });
+        });
+
+        
+       const mobil_menu = document.querySelector(".mobil-menu");
+      const open_menu = document.querySelector(".open-menu");
+      const body = document.querySelector(".body");
+      const blogMobil = document.querySelector(".blog-mobil");
+      const opBlog = document.querySelector(".op-mobil");
+      const blogArrow = document.querySelector(".blog-arrow");
+
+      opBlog.addEventListener("click", () => {
+        blogMobil.classList.toggle("active");
+        blogMobil.classList.toggle("actives");
+        blogArrow.classList.toggle("active");
+      });
+
+      open_menu.addEventListener("click", function () {
+        mobil_menu.classList.toggle("active");
+        body.classList.toggle("active");
+      });
+    </script>
 </body>
 </html>

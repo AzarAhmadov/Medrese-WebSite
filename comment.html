@@ -6,291 +6,344 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Medrese</title>
+  <link rel="stylesheet" href="assets/main.css/bootstrap.css" />
   <link rel="stylesheet" href="assets/main.css/bootstrap.css.map" />
-  <link rel="stylesheet" href="assets/main.css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/main.css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
+
 <body class="body">
-    <header class="header-top">
-        <div class="container ht-top d-flex align-items-center justify-content-between">
-            <div class="ht-left">
+  <header class="header-top">
+    <div class="container ht-top d-flex align-items-center justify-content-between">
+      <div class="ht-left">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-google-plus-g"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="ht-right">
+        <label for="lang" id="label"> <img src="./assets/img/27134 2.png" alt=""></label>
+        <select id="lang">
+          <option value="tr">Türkçe </option>
+          <option value="en">en</option>
+          <option value="ru">ru</option>
+        </select>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container hm-container d-flex">
+        <div class="hm-logo">
+          <a href="#"> <img src="./assets/img/medrese_TR 1.png" alt=""> </a>
+        </div>
+        <nav>
+          <ul>
+            <li class="active-li nav-list">
+              <a class="nav-link active" href="#"><i class="fa-solid fa-house"></i> Ana Sayfa </a>
+            </li>
+            <li class="nav-list">
+              <a class="nav-link" href="#"> <i class="fa-solid fa-microphone"></i> Podcastlar </a>
+            </li>
+            <li class="nav-list">
+              <a class="nav-link" href="#"> <i class="fa-solid fa-image"></i> Resimler</a>
+            </li>
+            <li class="nav-list">
+              <a class="nav-link" href="#"><i class="fa-solid fa-layer-group"></i>
+                Durumlar
+              </a>
+            </li>
+            <li class="nav-list">
+              <a class="nav-link" href="#"> <i class="fa-solid fa-circle-play"></i>Videolar</a>
+            </li>
+            <li class="nav-list blog-open">
+              <a class="nav-link" href="#"> <i class="fa-solid fa-list"></i> Blog</a>
+
+              <div class="dropdown">
                 <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-google-plus-g"></i>
-                        </a>
-                    </li>
+                  <li><a href="#"> Fringilla urna </a></li>
+                  <li><a href="#"> Fringilla urna </a></li>
+                  <li><a href="#"> Fringilla urna </a></li>
+                  <li><a href="#"> Fringilla urna </a></li>
                 </ul>
-            </div>
-            <div class="ht-right">
-                <label for="lang" id="label"> <img src="./assets/img/27134 2.png" alt=""></label>
-                <select id="lang">
-                    <option value="tr">Türkçe </option>
-                    <option value="en">en</option>
-                    <option value="ru">ru</option>
-                </select>
-            </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="open-menu">
+          <i class="fa-solid fa-bars-staggered"></i>
         </div>
-        <div class="header-main">
-            <div class="container hm-container d-flex">
-                <div class="hm-logo">
-                    <a href="#"> <img src="./assets/img/medrese_TR 1.png" alt=""> </a>
-                </div>
-                <nav>
-                    <ul>
-                        <li class="active-li nav-list">
-                            <a class="nav-link active" href="#"><i class="fa-solid fa-house"></i> Ana Sayfa </a>
-                        </li>
-                        <li class="nav-list">
-                            <a class="nav-link" href="#"> <i class="fa-solid fa-microphone"></i> Podcastlar </a>
-                        </li>
-                        <li class="nav-list">
-                            <a class="nav-link" href="#"> <i class="fa-solid fa-image"></i> Resimler</a>
-                        </li>
-                        <li class="nav-list">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-layer-group"></i>
-                                Durumlar
-                            </a>
-                        </li>
-                        <li class="nav-list">
-                            <a class="nav-link" href="#"> <i class="fa-solid fa-circle-play"></i>Videolar</a>
-                        </li>
-                        <li class="nav-list blog-open">
-                            <a class="nav-link" href="#"> <i class="fa-solid fa-list"></i> Blog</a>
+      </div>
+    </div>
+  </header>
 
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="#"> Fringilla urna </a></li>
-                                    <li><a href="#"> Fringilla urna </a></li>
-                                    <li><a href="#"> Fringilla urna </a></li>
-                                    <li><a href="#"> Fringilla urna </a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="open-menu">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </div>
+  <main class="cmt-main">
+    <section class="cmt">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="cmt-img">
+              <img class="img-fluid" src="./assets/img/quran-gc7ced0b95_1920_big.png" alt="">
             </div>
+          </div>
         </div>
-    </header>
-
-    <main class="cmt-main">
-        <section class="cmt">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                      <div class="cmt-img">
-                        <img class="img-fluid" src="./assets/img/quran-gc7ced0b95_1920_big.png" alt="">
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="cmt-ar">
-            <div class="container">
-                <div class="date-flex">
-                    <ul class="d-flex align-items-center">
-                        <li>
-                            <i class="fa-solid fa-calendar-check"></i>
-                            <span>25 Mart 2022</span>
-                        </li>
-                        <li>
-                           <a href="#">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>4</span>
-                           </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="date-text">
-                    <h3 class="dt-title1">Lectus magna fringilla urna</h3>
-                    <p class="dt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in </p>
-                    <p class="dt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa vitae tortor condimentum lacinia quis vel eros donec ac odio</p>
-                    <h3 class="dt-title2">Adipiscing elit ut aliquam, purus sit</h3>
-                    <p class="dt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare
-                    </p>
-                </div>
-                <div class="yorumlar">
-                    <h3 class="yorum-title">
-                        Yorumlar
-                    </h3>
-                    <div class="comment-box">
-                        <div class="comment-text">
-                        <div><img src="./assets/img/user.png" alt=""></div>
-                       <div class="d-flex flex-column m-div">
-                        <span class="user-name">
-                            Mehmet Taner
-                           </span>
-                           <span class="user-date">25 Mart, 2022</span>
-                           <span class="user-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis</span>
-                       </div>
-                        </div>
-
-                        <div class="reply">
-                           <button>
-                               <i class="fa-solid fa-reply"></i>
-                               Cevapla
-                            </button>
-                        </div>
-                    </div>
-                    <div class="comment-box">
-                        <div class="comment-text">
-                        <div><img src="./assets/img/user.png" alt=""></div>
-                       <div class="d-flex flex-column m-div">
-                        <span class="user-name">
-                            Mehmet Taner
-                           </span>
-                           <span class="user-date">25 Mart, 2022</span>
-                           <span class="user-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis</span>
-                       </div>
-                        </div>
-
-                        <div class="reply">
-                           <button>
-                               <i class="fa-solid fa-reply"></i>
-                               Cevapla
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="yorum-yaz">
-                        <h3 class="yorumyaz-title">
-                            Yorum yaz
-                        </h3>
-                        <form action="">
-                            <div class="form-flex">
-                                <input placeholder="İsim " type="text" id="input-name">
-                                <input placeholder=" E-posta " type="text" id="input-epost">
-                            </div>
-                            <textarea placeholder="Mesajınız " id="text-area" cols="20" rows="10"></textarea>
-                           <div class="get-btn d-flex justify-content-end">
-                            <button class="global-btn"> <a href="#"> Gönder </a> </button>
-                           </div>
-                        </form>
-                    </div>
-                </div>
+      </div>
+    </section>
+    <section class="cmt-ar">
+      <div class="container">
+        <div class="date-flex">
+          <ul class="d-flex align-items-center">
+            <li>
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>25 Mart 2022</span>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>4</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="date-text">
+          <h3 class="dt-title1">Lectus magna fringilla urna</h3>
+          <p class="dt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
+            venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis
+            leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque
+            fermentum dui faucibus in </p>
+          <p class="dt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
+            venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis
+            leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque
+            fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa
+            vitae tortor condimentum lacinia quis vel eros donec ac odio</p>
+          <h3 class="dt-title2">Adipiscing elit ut aliquam, purus sit</h3>
+          <p class="dt-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus
+            magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla
+            est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui
+            faucibus in ornare
+          </p>
+        </div>
+        <div class="yorumlar">
+          <h3 class="yorum-title">
+            Yorumlar
+          </h3>
+          <div class="comment-box">
+            <div class="comment-text">
+              <div><img src="./assets/img/user.png" alt=""></div>
+              <div class="d-flex flex-column m-div">
+                <span class="user-name">
+                  Mehmet Taner
+                </span>
+                <span class="user-date">25 Mart, 2022</span>
+                <span class="user-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus
+                  sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim
+                  praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim
+                  diam quis</span>
+              </div>
             </div>
 
-             <div class="mobil-menu">
-            <nav>
+            <div class="reply">
+              <button>
+                <i class="fa-solid fa-reply"></i>
+                Cevapla
+              </button>
+            </div>
+          </div>
+          <div class="comment-box">
+            <div class="comment-text">
+              <div><img src="./assets/img/user.png" alt=""></div>
+              <div class="d-flex flex-column m-div">
+                <span class="user-name">
+                  Mehmet Taner
+                </span>
+                <span class="user-date">25 Mart, 2022</span>
+                <span class="user-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus
+                  sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim
+                  praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim
+                  diam quis</span>
+              </div>
+            </div>
+
+            <div class="reply">
+              <button>
+                <i class="fa-solid fa-reply"></i>
+                Cevapla
+              </button>
+            </div>
+          </div>
+
+          <div class="yorum-yaz">
+            <h3 class="yorumyaz-title">
+              Yorum yaz
+            </h3>
+            <form action="">
+              <div class="form-flex">
+                <input placeholder="İsim " type="text" id="input-name">
+                <input placeholder=" E-posta " type="text" id="input-epost">
+              </div>
+              <textarea placeholder="Mesajınız " id="text-area" cols="20" rows="10"></textarea>
+              <div class="get-btn d-flex justify-content-end">
+                <button class="global-btn"> <a href="#"> Gönder </a> </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobil-menu">
+        <nav>
+          <ul>
+            <li><a href="#"> Ana Sayfa </a></li>
+            <li><a href="#"> Podcastlar </a></li>
+            <li><a href="#"> Resimler</a></li>
+            <li><a href="#"> Durumlar </a></li>
+            <li><a href="#"> Videolar </a></li>
+            <li>
+              <a class="op-mobil" href="#">
+                Blog <i class="fa-solid fa-angle-right blog-arrow"></i>
+                <ul class="blog-mobil">
+                  <li><a href="#"> Fringilla urna </a></li>
+                  <li><a href="#"> Fringilla urna </a></li>
+                  <li><a href="#"> Fringilla urna </a></li>
+                  <li><a href="#"> Fringilla urna </a></li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="f-row row">
+        <div class="col-lg-4 col-12">
+          <div class="footer-left">
+            <img src="./assets/img/medrese_TR 1.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
+              venenatis, lectus magna fringilla</p>
+            <div class="footer-link">
               <ul>
-                <li><a href="#"> Ana Sayfa </a></li>
-                <li><a href="#"> Podcastlar </a></li>
-                <li><a href="#"> Resimler</a></li>
-                <li><a href="#"> Durumlar </a></li>
-                <li><a href="#"> Videolar </a></li>
                 <li>
-                  <a class="op-mobil" href="#">
-                    Blog <i class="fa-solid fa-angle-right blog-arrow"></i>
-                    <ul class="blog-mobil">
-                      <li><a href="#"> Fringilla urna </a></li>
-                      <li><a href="#"> Fringilla urna </a></li>
-                      <li><a href="#"> Fringilla urna </a></li>
-                      <li><a href="#"> Fringilla urna </a></li>
-                    </ul>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-google-plus-g"></i>
                   </a>
                 </li>
               </ul>
-            </nav>
-          </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-          <div class="f-row row">
-            <div class="col-lg-4 col-12">
-              <div class="footer-left">
-                <img src="./assets/img/medrese_TR 1.png" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-                  venenatis, lectus magna fringilla</p>
-                <div class="footer-link">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i class="fa-brands fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-brands fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa-brands fa-google-plus-g"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-12">
-              <div class="footer-nav">
-                <ul>
-                  <span>Lectus magna</span>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-2 col-12">
-              <div class="footer-nav">
-                <ul>
-                  <span>Lectus magna</span>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                  <li><a href="#">Porttitor rhoncus </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-4 form-col ">
-              <form action="" class="position-relative">
-                <ul>
-                  <li> <span> Lectus magna </span> </li>
-                  <li class="inp">
-                    <input type="text" placeholder="E-posta Adresi ">
-                    <button type="submit"> Gönder </button>
-                  </li>
-                  <li style="margin-top: 30px;">
-                    <img src="./assets/img/image 6.png" alt="">
-                    <img src="./assets/img/image 8.png" alt="">
-                  </li>
-                </ul>
-              </form>
             </div>
           </div>
         </div>
-      </footer>
-    <script src="assets/main.js/main.js"></script>
+        <div class="col-lg-2 col-12">
+          <div class="footer-nav">
+            <ul>
+              <span>Lectus magna</span>
+              <li><a href="#">Porttitor rhoncus </a></li>
+              <li><a href="#">Porttitor rhoncus </a></li>
+              <li><a href="#">Porttitor rhoncus </a></li>
+              <li><a href="#">Porttitor rhoncus </a></li>
+              <li><a href="#">Porttitor rhoncus </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-12">
+          <div class="footer-nav">
+            <ul>
+              <span>Lectus magna</span>
+              <li><a href="#">Porttitor rhoncus </a></li>
+              <li><a href="#">Porttitor rhoncus </a></li>
+              <li><a href="#">Porttitor rhoncus </a></li>
+              <li><a href="#">Porttitor rhoncus </a></li>
+              <li><a href="#">Porttitor rhoncus </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 form-col ">
+          <form action="" class="position-relative">
+            <ul>
+              <li> <span> Lectus magna </span> </li>
+              <li class="inp">
+                <input type="text" placeholder="E-posta Adresi ">
+                <button type="submit"> Gönder </button>
+              </li>
+              <li style="margin-top: 30px;">
+                <img src="./assets/img/image 6.png" alt="">
+                <img src="./assets/img/image 8.png" alt="">
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const list_li = document.querySelectorAll('.nav-list')
+    const nav_link = document.querySelectorAll('.nav-link')
+
+    list_li.forEach((item) => {
+      item.addEventListener("click", () => {
+        document.querySelector(".nav-list.active-li").classList.remove("active-li");
+        item.classList.add("active-li");
+      });
+    });
+
+    nav_link.forEach((item) => {
+      item.addEventListener("click", () => {
+        document.querySelector(".nav-link.active").classList.remove("active");
+        item.classList.add("active");
+      });
+    });
+
+
+    const mobil_menu = document.querySelector(".mobil-menu");
+    const open_menu = document.querySelector(".open-menu");
+    const body = document.querySelector(".body");
+    const blogMobil = document.querySelector(".blog-mobil");
+    const opBlog = document.querySelector(".op-mobil");
+    const blogArrow = document.querySelector(".blog-arrow");
+
+    opBlog.addEventListener("click", () => {
+      blogMobil.classList.toggle("active");
+      blogMobil.classList.toggle("actives");
+      blogArrow.classList.toggle("active");
+    });
+
+    open_menu.addEventListener("click", function () {
+      mobil_menu.classList.toggle("active");
+      body.classList.toggle("active");
+    });
+  </script>
 </body>
+
 </html>
