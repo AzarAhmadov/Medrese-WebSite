@@ -1012,11 +1012,14 @@ h6 {
     line-height: 102%;
     color: #919191;
 }
-
+.n-b{
+    padding-top: 55px !important;
+}
 .blog-post {
     margin-top: 80px;
     position: relative;
 }
+
 
 .blog-detail {
     position: absolute;
