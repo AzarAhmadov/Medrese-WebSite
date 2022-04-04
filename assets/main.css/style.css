@@ -2218,6 +2218,9 @@ input[type='range']::-webkit-slider-thumb {
     color: #fff;
 }
 
+.video-story{
+    margin-top: 111px;
+}
 
 .video-story h3 {
     font-family: 'Quicksand';
@@ -2873,6 +2876,9 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 @media only screen and (max-width:768px) {
+    #last-text{
+        padding-bottom:60px !important;
+    }
     .all-left h3 {
         font-size: 30px;
     }
@@ -3052,9 +3058,15 @@ input[type='range']::-webkit-slider-thumb {
         background-size: contain !important;
         background-position: center !important;
     }
+    .video-story{
+        margin-top: 60px;
+    }
 }
 
 @media only screen and (max-width:600px) {
+    .video-story h3{
+        font-size:25px;
+    }
     .blog-detail {
         bottom: -70px !important;
     }
