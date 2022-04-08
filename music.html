@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.4.6/plyr.css">
 </head>
 
 <body class="body">
@@ -109,12 +110,8 @@
             <div class="music-player">
               <div class="music-name">
                 <div class="music-top">
-                  <i class="fa-solid fa-play top-i"></i>
-                  <p style="color: white" id="title"> Music </p>
-                </div>
-                <div class="player">
-                  <audio class="trackPlaying" controls src="./assets/audio/1.mp3">
-                  </audio>
+                  <i class="fa-solid fa-play fs-4 top-i"></i>
+                  <p style="color: white" id="title"> Muzikler </p>
                 </div>
               </div>
             </div>
@@ -122,57 +119,50 @@
         </div>
       </div>
     </section>
-    <section class="music-bottom">
+    <section class="music-list-item">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="music-left d-flex justify-content-start align-items-center">
-              <div>
-                <span class="num">1.</span>
+        <div class="container">
+          <audio controls id="plyrlist">
+            <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="audio/mp3">
+          </audio>
+          <ul class="d-flex justify-content-between player-area">
+            <li class="player-src w-100" data-type="mp3" data-src="https://vjs.zencdn.net/v/oceans.webm">
+              <div class="d-flex align-items-center">
+                <span>1.</span>
+                <p>Şarkı 1</p>
               </div>
-              <div class="music-item d-flex align-items-center justify-content-between w-100">
-                <p class='tracks w-100 d-flex align-items-center'>audio 1
-                  <span class="audioLinks">./assets/audio/1.mp3</span>
-                  <span class="abs">
-                    <i class="fa-solid fa-play music-play"></i>
-                    <i class="fa-solid fa-download "></i>
-                  </span>
-                </p>
+              <div class="icon-flex-item">
+                <i class="fa-solid fa-play fs-5 top-i"></i>
               </div>
-            </div>
-            <div class="music-left d-flex justify-content-start">
-              <div>
-                <span class="num">2.</span>
+            </li>
+            <i class="fa-solid fa-download"></i>
+          </ul>
+          <ul class="d-flex justify-content-between player-area">
+            <li class="player-src w-100" data-type="mp3" data-src="/assets/audio/1.mp3">
+              <div class="d-flex align-items-center">
+                <span>2.</span>
+                <p>Şarkı 2</p>
               </div>
-              <div class="music-item d-flex align-items-center justify-content-between w-100">
-                <p class='tracks w-100'>audio 2
-                  <span class="audioLinks">./assets/audio/2.mp3</span>
-                  <span class="abs">
-                    <i class="fa-solid fa-play music-play"></i>
-                    <i class="fa-solid fa-download "></i>
-                  </span>
-                </p>
+              <div class="icon-flex-item">
+                <i class="fa-solid fa-play fs-5 top-i"></i>
               </div>
-            </div>
-            <div class="music-left d-flex justify-content-start">
-              <div>
-                <span class="num">3.</span>
+            </li>
+            <i class="fa-solid fa-download"></i>
+          </ul>
+          <ul class="d-flex justify-content-between player-area">
+            <li class="player-src w-100" data-type="mp3" data-src="https://vjs.zencdn.net/v/oceans.webm">
+              <div class="d-flex align-items-center">
+                <span>3.</span>
+                <p>Şarkı 3</p>
               </div>
-              <div class="music-item d-flex align-items-center justify-content-between w-100">
-                <p class='tracks w-100'>audio 3
-                  <span class="audioLinks">./assets/audio/3.mp3</span>
-                  <span class="abs">
-                    <i class="fa-solid fa-play music-play"></i>
-                    <i class="fa-solid fa-download "></i>
-                  </span>
-                </p>
+              <div class="icon-flex-item">
+                <i class="fa-solid fa-play fs-5 top-i"></i>
               </div>
-            </div>
-          </div>
+            </li>
+            <i class="fa-solid fa-download"></i>
+          </ul>
         </div>
-      </div>
     </section>
-
     <section class="music-text">
       <div class="container">
         <div class="row">
@@ -227,7 +217,8 @@
           <div class="swiper swiper-container9">
             <div class="swiper-wrapper">
               <div class="swiper-slide swiper-index swiper-music">
-                <img class="pod-img" src="./assets/img/book-g558c2ce9b_1920 1.png" alt="">
+                <a href="#">
+                  <img class="pod-img" src="./assets/img/book-g558c2ce9b_1920 1.png" alt="">
                 <div class="pot-text">
                   <span>Lectus magna fringilla </span>
                   <p>Venenatis, lectus magna fringilla urna</p>
@@ -235,20 +226,11 @@
                     <i class="fa-solid fa-headphones"></i>
                   </div>
                 </div>
+                </a>
               </div>
               <div class="swiper-slide swiper-index swiper-music">
-                <img class="pod-img " src="./assets/img/ramadan-g90c0a7b2e_1920 1.png" alt="">
-                <div class="pot-text">
-                  <span>Lectus magna fringilla </span>
-                  <p>Venenatis, lectus magna fringilla urna</p>
-                  <div class="icon-pot">
-                    <i class="fa-solid fa-headphones"></i>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide swiper-index swiper-music">
-                <img class="pod-img" src="./assets/img/book-g558c2ce9b_1920 1.png" alt="">
+                <a href="#">
+                  <img class="pod-img " src="./assets/img/ramadan-g90c0a7b2e_1920 1.png" alt="">
                 <div class="pot-text">
                   <span>Lectus magna fringilla </span>
                   <p>Venenatis, lectus magna fringilla urna</p>
@@ -257,8 +239,23 @@
                   </div>
 
                 </div>
+                </a>
               </div>
               <div class="swiper-slide swiper-index swiper-music">
+               <a href="#">
+                <img class="pod-img" src="./assets/img/book-g558c2ce9b_1920 1.png" alt="">
+                <div class="pot-text">
+                  <span>Lectus magna fringilla </span>
+                  <p>Venenatis, lectus magna fringilla urna</p>
+                  <div class="icon-pot">
+                    <i class="fa-solid fa-headphones"></i>
+                  </div>
+
+                </div>
+               </a>
+              </div>
+              <div class="swiper-slide swiper-index swiper-music">
+               <a href="#">
                 <img class="pod-img" src="./assets/img/podcast2.png" alt="">
                 <div class="pot-text">
                   <span>Lectus magna fringilla </span>
@@ -268,9 +265,11 @@
                   </div>
 
                 </div>
+               </a>
               </div>
               <div class="swiper-slide swiper-index swiper-music">
-                <img class="pod-img" src="./assets/img/book-g558c2ce9b_1920 1.png" alt="">
+                <a href="#">
+                  <img class="pod-img" src="./assets/img/book-g558c2ce9b_1920 1.png" alt="">
                 <div class="pot-text">
                   <span>Lectus magna fringilla </span>
                   <p>Venenatis, lectus magna fringilla urna</p>
@@ -279,6 +278,7 @@
                   </div>
 
                 </div>
+                </a>
               </div>
             </div>
           </div>
@@ -288,23 +288,23 @@
 
     <div class="mobil-menu">
       <nav>
-          <ul>
-              <li><a href="index.html"> Ana Sayfa </a></li>
-              <li><a href="podcast.html"> Podcastlar </a></li>
-              <li><a href="galary.html"> Resimler</a></li>
-              <li><a href="durumlar.html"> Durumlar </a></li>
-              <li><a href="video.html"> Videolar </a></li>
-              <li><a class="op-mobil" href="#"> Blog <i class="fa-solid fa-angle-right blog-arrow"></i>
-                      <ul class="blog-mobil">
-                          <li><a href="#"> Fringilla urna </a></li>
-                          <li><a href="#"> Fringilla urna </a></li>
-                          <li><a href="#"> Fringilla urna </a></li>
-                          <li><a href="#"> Fringilla urna </a></li>
-                      </ul>
-                  </a></li>
-          </ul>
+        <ul>
+          <li><a href="index.html"> Ana Sayfa </a></li>
+          <li><a href="podcast.html"> Podcastlar </a></li>
+          <li><a href="galary.html"> Resimler</a></li>
+          <li><a href="durumlar.html"> Durumlar </a></li>
+          <li><a href="video.html"> Videolar </a></li>
+          <li><a class="op-mobil" href="#"> Blog <i class="fa-solid fa-angle-right blog-arrow"></i>
+              <ul class="blog-mobil">
+                <li><a href="#"> Fringilla urna </a></li>
+                <li><a href="#"> Fringilla urna </a></li>
+                <li><a href="#"> Fringilla urna </a></li>
+                <li><a href="#"> Fringilla urna </a></li>
+              </ul>
+            </a></li>
+        </ul>
       </nav>
-  </div>
+    </div>
   </main>
 
   <footer class="footer">
@@ -385,68 +385,36 @@
   </footer>
 
   <script src="assets/main.js/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.plyr.io/3.4.6/plyr.js"></script>
   <script>
-
-    const player = document.querySelector(`.trackPlaying`);
-    const tracks = document.querySelectorAll(`.tracks`);
-    const audioLinks = document.querySelectorAll(`.audioLinks`);
-    let audioLinkArr = [];
-    let songCount = 0;
-
-    //loops through audioLinks and pushes the iterator into audioLinkArr
-    audioLinks.forEach(audioLink => {
-      audioLinkArr.push(audioLink);
-    });
-
-    //change the active class of the track
-    const changeActive = change => {
-      const active = document.querySelector(`.activePod`);
-      if (active) {
-        active.classList.remove(`activePod`);
+    document.addEventListener('DOMContentLoaded', () => {
+      const player = new Plyr('#plyrlist');
+      window.player = player;
+      function on(selector, type, callback) {
+        document.querySelector(selector).addEventListener(type, callback, false);
       }
-      change.classList.add(`activePod`);
-    };
-
-    //makes shit happen
-    tracks.forEach(function (track, index) {
-      track.addEventListener(`click`, function (e) {
-        const links = track.querySelector('.audioLinks');
-        const target = e.target;
-        songCount = index;
-
-        //toggle active class
-        changeActive(target);
-
-        //change track
-        player.src = links.textContent;
-        player.autoplay = true;
-        player.preload = true;
-
-        //auto play next song when previous is finished
-        player.addEventListener(`ended`, () => {
-          songCount++;
-
-          //checks and plays the song
-          if (songCount < audioLinkArr.length) {
-            player.src = audioLinkArr[songCount].textContent;
-            player.autoplay = true;
-            player.preload = true;
-
-            //toggle active class function
-            changeActive(audioLinkArr[songCount].parentElement);
-            return;
-          }
-          songCount = 0;
-          player.src = audioLinkArr[songCount].textContent;
-          player.autoplay = true;
-          player.preload = true;
-
-          //toggle active class function
-          changeActive(audioLinkArr[songCount].parentElement);
-        });
-      });
     });
 
+    $(document).ready(() => {
+      $('.player-src').on('click', function () {
+        src = $(this).data("src");
+        type = 'audio/' + $(this).data("type");
+        player.source = {
+          type: 'audio',
+          title: 'Example title',
+          sources: [
+            {
+              src: src,
+              type: type,
+            }
+          ],
+
+        };
+
+        player.play();
+      });
+    })
 
     var swiper9 = new Swiper(".swiper-container9", {
       slidesPerView: 3,
