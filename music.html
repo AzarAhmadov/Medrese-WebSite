@@ -111,7 +111,7 @@
               <div class="music-name">
                 <div class="music-top">
                   <i class="fa-solid fa-play fs-4 top-i"></i>
-                  <p style="color: white" id="title"> Muzikler </p>
+                  <p style="color: white" id="title"> Şarkı 1 </p>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@
             <source src="./assets/audio/music1.mp3" type="audio/mp3">
           </audio>
           <ul class="d-flex justify-content-between player-area">
-            <li class="player-src w-100" data-type="mp3" data-src="assets/audio/1.mp3">
+            <li onclick="changeName1()" class="player-src w-100" data-type="mp3" data-src="assets/audio/1.mp3">
               <div class="d-flex align-items-center">
                 <span>1.</span>
                 <p>Şarkı 1</p>
@@ -138,10 +138,10 @@
             <i class="fa-solid fa-download"></i>
           </ul>
           <ul class="d-flex justify-content-between player-area">
-            <li class="player-src w-100" data-type="mp3" data-src="assets/audio/2.mp3">
+            <li onclick="changeName2()" class="player-src w-100" data-type="mp3" data-src="assets/audio/2.mp3">
               <div class="d-flex align-items-center">
                 <span>2.</span>
-                <p>Şarkı 2</p>
+                <p >Şarkı 2</p>
               </div>
               <div class="icon-flex-item">
                 <i class="fa-solid fa-play fs-5 top-i"></i>
@@ -150,7 +150,7 @@
             <i class="fa-solid fa-download"></i>
           </ul>
           <ul class="d-flex justify-content-between player-area">
-            <li class="player-src w-100" data-type="mp3" data-src="assets/audio/3.mp3">
+            <li onclick="changeName3()" class="player-src w-100" data-type="mp3" data-src="assets/audio/3.mp3">
               <div class="d-flex align-items-center">
                 <span>3.</span>
                 <p>Şarkı 3</p>
@@ -388,12 +388,25 @@
   <script src="assets/main.js/jquery.min.js"></script>
   <script src="assets/main.js/plyr.js"></script>
   <script>
-    const title_music = document.querySelector('.title')
-    const musicObj = {
+      const musicObj = {
       music_name1:"Şarkı 1",
       music_name2:"Şarkı 2",
       music_name3:"Şarkı 3"
     }
+
+     const title_music = document.querySelector('#title')
+
+      function changeName1(){
+     title_music.innerHTML = musicObj.music_name1
+    }
+      function changeName2(){
+     title_music.innerHTML = musicObj.music_name2
+    }
+
+    function changeName3(){
+     title_music.innerHTML = musicObj.music_name3
+    }
+
 
     document.addEventListener('DOMContentLoaded', () => {
       const player = new Plyr('#plyrlist');
