@@ -123,10 +123,10 @@
       <div class="container">
         <div class="container">
           <audio controls id="plyrlist">
-            <source src="./assets/audio/3.mp3" type="audio/mp3">
+            <source src="./assets/audio/music1.mp3" type="audio/mp3">
           </audio>
           <ul class="d-flex justify-content-between player-area">
-            <li class="player-src w-100" data-type="mp3" data-src="https://vjs.zencdn.net/v/oceans.webm">
+            <li class="player-src w-100" data-type="mp3" data-src="assets/audio/1.mp3">
               <div class="d-flex align-items-center">
                 <span>1.</span>
                 <p>Şarkı 1</p>
@@ -138,7 +138,7 @@
             <i class="fa-solid fa-download"></i>
           </ul>
           <ul class="d-flex justify-content-between player-area">
-            <li class="player-src w-100" data-type="mp3" data-src="/assets/audio/1.mp3">
+            <li class="player-src w-100" data-type="mp3" data-src="assets/audio/2.mp3">
               <div class="d-flex align-items-center">
                 <span>2.</span>
                 <p>Şarkı 2</p>
@@ -150,7 +150,7 @@
             <i class="fa-solid fa-download"></i>
           </ul>
           <ul class="d-flex justify-content-between player-area">
-            <li class="player-src w-100" data-type="mp3" data-src="https://vjs.zencdn.net/v/oceans.webm">
+            <li class="player-src w-100" data-type="mp3" data-src="assets/audio/3.mp3">
               <div class="d-flex align-items-center">
                 <span>3.</span>
                 <p>Şarkı 3</p>
@@ -388,6 +388,13 @@
   <script src="assets/main.js/jquery.min.js"></script>
   <script src="assets/main.js/plyr.js"></script>
   <script>
+    const title_music = document.querySelector('.title')
+    const musicObj = {
+      music_name1:"Şarkı 1",
+      music_name2:"Şarkı 2",
+      music_name3:"Şarkı 3"
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       const player = new Plyr('#plyrlist');
       window.player = player;
@@ -402,7 +409,6 @@
         type = 'audio/' + $(this).data("type");
         player.source = {
           type: 'audio',
-          title: 'Example title',
           sources: [
             {
               src: src,
