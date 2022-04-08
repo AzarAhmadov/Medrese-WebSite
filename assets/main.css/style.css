@@ -1101,6 +1101,10 @@ audio::-webkit-media-controls-time-remaining-display {
     color: #989898;
 }
 
+.plyr__time{
+    margin-top: -3px !important;
+}
+
 .blog-detail .b-text {
     margin-top: 18px;
     padding-bottom: 18px;
@@ -3225,6 +3229,9 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 @media only screen and (max-width:600px) {
+    .plyr__time{
+        margin-top: -1.5px !important;
+    }
     .player-area .fa-download {
         height: 40px;
         width: 47px;
